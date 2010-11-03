@@ -1,4 +1,4 @@
 <template.*>: syntax_camlp4o,pkg_htcaml,pkg_unix
 <template_css.*>: syntax_camlp4o,pkg_cass
-<types.ml>: syntax_camlp4o,pkg_htcaml
+<types.ml>: pkg_htcaml
 <data.ml>: syntax_camlp4o,pkg_htcaml

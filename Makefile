@@ -1,4 +1,4 @@
-DEST = samoht@amis.tv:~/public_html/perso/thomas
+DEST = john@doo.com:~/public_html
 
 all: html css
 

@@ -15,71 +15,67 @@
  *)
 
 open Types
-open Html
 
 (* People *)
-let me = make_author "T. Gazagnaire" "http://gazagnaire.org"
-let blaise = make_author "B. Genest" "www.crans.org/~genest"
-let loic = make_author "L. Hélouët" "http://www.irisa.fr/distribcom/Personal_Pages/helouet/newloic.html"
-let shaofa = make_author "S. Yang" "http://www.irisa.fr/distribcom/Personal_Pages/Shaofa/"
-let thiagu = make_author "P.S. Thiagarajan" "http://www.comp.nus.edu.sg/~thiagu/"
-let deb = make_author "D. Biswas" "http://www.linkedin.com/pub/1/526/397"
-let claude = make_author "C. Jard" "http://www.dit.bretagne.ens-cachan.fr/People/Claude.Jard/"
+
+let make name link = { name=name; link=link }
+
+let me = make "T. Gazagnaire" "http://gazagnaire.org"
+let blaise = make "B. Genest" "www.crans.org/~genest"
+let loic = make "L. Hélouët" "http://www.irisa.fr/distribcom/Personal_Pages/helouet/newloic.html"
+let shaofa = make "S. Yang" "http://www.irisa.fr/distribcom/Personal_Pages/Shaofa/"
+let thiagu = make "P.S. Thiagarajan" "http://www.comp.nus.edu.sg/~thiagu/"
+let deb = make "D. Biswas" "http://www.linkedin.com/pub/1/526/397"
+let claude = make "C. Jard" "http://www.dit.bretagne.ens-cachan.fr/People/Claude.Jard/"
     
-let luc = make_author "L. Bougé" "http://www.dit.bretagne.ens-cachan.fr/People/Luc.Bouge/"
-let francois = make_author "F. Bodin" "http://www.irisa.fr/caps/people/bodin/index.htm"
+let luc = make "L. Bougé" "http://www.dit.bretagne.ens-cachan.fr/People/Luc.Bouge/"
+let francois = make "F. Bodin" "http://www.irisa.fr/caps/people/bodin/index.htm"
 
-let richard = make_author "R. Sharp" "http://rich.recoil.org/"
-let dave = make_author "D. Scott" "http://dave.recoil.org/"
-let jonlud = make_author "J. Ludlam" "http://jon.recoil.org/index.xhtml"
-let jondav = make_author "J. Davies" "http://www.cl.cam.ac.uk/~jjd27/"
-let jsk = make_author "J. Knowles" "https://launchpad.net/~jsk"
-let vincent = make_author "V. Hanquez" "http://tab.snarc.org/"
-let marcus = make_author "M. Granado" "http://www.cl.cam.ac.uk/~mg376/"
+let richard = make "R. Sharp" "http://rich.recoil.org/"
+let dave = make "D. Scott" "http://dave.recoil.org/"
+let jonlud = make "J. Ludlam" "http://jon.recoil.org/index.xhtml"
+let jondav = make "J. Davies" "http://www.cl.cam.ac.uk/~jjd27/"
+let jsk = make "J. Knowles" "https://launchpad.net/~jsk"
+let vincent = make "V. Hanquez" "http://tab.snarc.org/"
+let marcus = make "M. Granado" "http://www.cl.cam.ac.uk/~mg376/"
 
-let gerard = make_author "G. Boudol" "http://www-sop.inria.fr/members/Gerard.Boudol/"
-let ilaria = make_author "I. Castellani" "http://www-sop.inria.fr/mimosa/personnel/Ilaria.Castellani.html"
-let bruno = make_author "B. Arnaldi" "http://www.irisa.fr/bunraku/GENS/arnaldi/SOMMAIRE/Curiculum%20Vitae.html"
+let gerard = make "G. Boudol" "http://www-sop.inria.fr/members/Gerard.Boudol/"
+let ilaria = make "I. Castellani" "http://www-sop.inria.fr/mimosa/personnel/Ilaria.Castellani.html"
+let bruno = make "B. Arnaldi" "http://www.irisa.fr/bunraku/GENS/arnaldi/SOMMAIRE/Curiculum%20Vitae.html"
 
-let stefano = make_author "S. Soatto" "http://www.cs.ucla.edu/~soatto/"
-let paulo = make_author "P. Favaro" "http://www.eps.hw.ac.uk/~pf21/"
-let hailin = make_author "H. Jin" "http://vision.ucla.edu/~hljin/"
+let stefano = make "S. Soatto" "http://www.cs.ucla.edu/~soatto/"
+let paulo = make "P. Favaro" "http://www.eps.hw.ac.uk/~pf21/"
+let hailin = make "H. Jin" "http://vision.ucla.edu/~hljin/"
 
-let manuel = make_author "M. Serrano" "http://www-sop.inria.fr/members/Manuel.Serrano/"
-let anil = make_author  "A. Madhavappeddy" "http://anil.recoil.org"
-let mort = make_author "R. Mortier" "http://www.cs.nott.ac.uk/~rmm/"
-let rip = make_author "R. Sohan" "http://www.cl.cam.ac.uk/~rss39/"
-let hand = make_author "S. Hand" "http://www.cl.cam.ac.uk/~smh22/"
-let tim = make_author "T. Deegan" "http://www.tjd.phlegethon.org/"
-let derek = make_author "D. McAuley" "http://www.cs.nott.ac.uk/~drm/"
-let crowcroft = make_author "J. Crowcroft" "http://www.cl.cam.ac.uk/~jac22/"
-
-let p_weis = make_author "P. Weis" "http://pauillac.inria.fr/~weis/"
-
-let map_link (t,l) =  { text="["^t^"]"; href=l }
+let manuel = make "M. Serrano" "http://www-sop.inria.fr/members/Manuel.Serrano/"
+let anil = make  "A. Madhavappeddy" "http://anil.recoil.org"
+let mort = make "R. Mortier" "http://www.cs.nott.ac.uk/~rmm/"
+let rip = make "R. Sohan" "http://www.cl.cam.ac.uk/~rss39/"
+let hand = make "S. Hand" "http://www.cl.cam.ac.uk/~smh22/"
+let tim = make "T. Deegan" "http://www.tjd.phlegethon.org/"
+let derek = make "D. McAuley" "http://www.cs.nott.ac.uk/~drm/"
+let crowcroft = make "J. Crowcroft" "http://www.cl.cam.ac.uk/~jac22/"
 
 module Publis = struct
  
   let refereed = ref []
   let tech = ref []
 
-  type kind = Refereed | Tech
-
 	let save_custom y k a t w f =
     let p = {
-      authors = a;
-		  title   = t;
-		  where   = w;
-		  year    = y;
-		  files   = List.map map_link f;
+      authors=a;
+		  title=t;
+		  where=w;
+		  year=y;
+		  kind=k;
+		  files=f;
     } in
     match k with
       | Refereed -> refereed := p :: !refereed
       | Tech     -> tech     := p :: !tech 
 
 	let save y k a t w =
-    save_custom y k a t w
-      [ "pdf", Printf.sprintf "pub/%s.pdf" (short_name a y) ]
+    save_custom y k a t w ["pdf", Printf.sprintf "pub/%s.pdf" (short_name a y)]
 
 	let causaux = "Causal Message Sequence Charts"
 
@@ -205,10 +201,10 @@ module Projects = struct
   let past = ref []
 
   let save n d l =
-    current := { name = n; description = d; links = List.map map_link l } :: !current
+    current := { p_name = n; p_description = d; p_links = l } :: !current
   
   let save_past n d l =
-    past := { name = n; description = d; links = List.map map_link l } :: !past
+    past := { p_name = n; p_description = d; p_links = l } :: !past
 
   let () =
     save
@@ -224,8 +220,9 @@ module Projects = struct
     save
       "camloo"
       <:html<
-      An ML-to-Scheme compiler, initially written by $html_of_author manuel$
-      and $html_of_author p_weis$ few decades ago.>>
+      An ML-to-Scheme compiler, initially written by <a href=$str:manuel.link$>
+      $str:manuel.name$</> and <a href="http://pauillac.inria.fr/~weis/">
+      Pierre Weis</> few decades ago.>>
       [ "website"   , "http://www-sop.inria.fr/members/Thomas.Gazagnaire/";
         "camloo.git", "http://www.github.com/samoht/camloo" ];
 
@@ -274,16 +271,3 @@ end
 
 let current_projects = List.rev !Projects.current
 let past_projects = List.rev !Projects.past
-
-let dblp = <:html< <a href ="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</> >>
-let inria_sop = <:html< <a href="http://www-sop.inria.fr">INRIA sophia-antipolis</> >>
-let indes = <:html< <a href="http://www-sop.inria.fr/indes/">INDES</> >>
-let irisa = <:html< <a href="http://www.irisa.fr/">IRISA</> >>
-let distribcom = <:html< <a href="http://www.irisa.fr/distribcom/">DistribCom</> >>
-let citrix = <:html< <a href="http://www.citrix.com">Citrix</> >>
-let xenserver = <:html< <a href="www.citrix.com/xenserver">XenServer</> >>
-let xcp = <:html< <a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</> >>
-let ocaml = <:html< <a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</> >>
-let github = <:html< <a href="http://www.github.com/samoht">github</> >>
-let ens_lyon = <:html< <a href="http://www.ens-lyon.eu">ENS Lyon</> >>
-let ens_cachan = <:html< <a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</> >>

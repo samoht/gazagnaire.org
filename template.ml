@@ -15,33 +15,84 @@
  *)
 
 open Types
-open Data
-open Html
 
 (* People *)
-let papers = {
-  left = <:html<
+let html_of_people t =
+  <:html< <a href=$str:t.link$ class="people"> $str:t.name$ </> >>
+
+(* Publications *)
+let html_of_links (name, link) =
+  <:html<
+    <a href=$str:link$>$str:"["^name^"]"$</>
+  >>
+
+let html_of_publication p =
+  let cl =
+    Printf.sprintf "\"publication %s\""
+      (match p.kind with Tech -> "tech" | Refereed -> "refereed") in
+  <:html<
+    <div class=$str:cl$ id=$str:short_name p.authors p.year$>
+      <div class="title">$str:p.title$</>
+      <div class="authors">$list:List.map html_of_people p.authors$</>
+      <div class="descr">
+        <span class="where">$str:p.where ^ ","$</>
+        <span class="when">$str:string_of_int p.year ^ "."$</>
+        <span class="files">$list:List.map html_of_links p.files$</>
+      </>
+    </>
+  >>
+
+let papers =
+  <:html<
+    <div class="left">
     <h1>Refereed publications</>
-    $list:List.map html_of_refereed refereed_publications$ >>;
-  right = <:html<
-    <p>My $dblp$ page lists some of my publications.</>
+    $list:List.map html_of_publication Data.refereed_publications$
+    </>
+    <div class="right">
+    <p>My <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP page</> lists some of my publications.</>
     <h1>Tech reports</>
-    $list:List.map html_of_tech tech_publications$ >>;
-}
+    $list:List.map html_of_publication Data.tech_publications$
+    </>
+  >>
 
 (* Projects *)
-let projects = {
-  left = <:html<
-    <h1>Current projects</>
-    $list:List.map html_of_project current_projects$ >>;
-  right = <:html<
-    <h1>Past projects</>
-    $list:List.map html_of_project past_projects$ >>;
-}
+let html_of_project p =
+  <:html< 
+    <div class="project">
+      <div class="name">$str:p.p_name$</>
+      <div class="description">$p.p_description$</>
+      <div class="links">$list:List.map html_of_links p.p_links$</>
+    </>
+  >>
+
+let projects =
+  <:html<
+    <div class="left current">
+      <h1>Current projects</>
+      $list:List.map html_of_project Data.current_projects$
+    </>
+    <div class="right past">
+      <h1>Past projects</>
+      $list:List.map html_of_project Data.past_projects$
+    </>
+  >>
 
 (* Home page *)
-let home = {
-  left = <:html<
+let inria_sop = <:html< <a href="http://www-sop.inria.fr">INRIA sophia-antipolis</> >>
+let indes = <:html< <a href="http://www-sop.inria.fr/indes/">INDES</> >>
+let irisa = <:html< <a href="http://www.irisa.fr/">IRISA</> >>
+let distribcom = <:html< <a href="http://www.irisa.fr/distribcom/">DistribCom</> >>
+let citrix = <:html< <a href="http://www.citrix.com">Citrix</> >>
+let xenserver = <:html< <a href="www.citrix.com/xenserver">XenServer</> >>
+let xcp = <:html< <a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</> >>
+let ocaml = <:html< <a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</> >>
+let github = <:html< <a href="http://www.github.com/samoht">github</> >>
+let ens_lyon = <:html< <a href="http://www.ens-lyon.eu">ENS Lyon</> >>
+let ens_cachan = <:html< <a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</> >>
+
+let home =
+	<:html<
+    <div class="left">
     <h1>Thomas Gazagnaire</>
     <p>I am a postdoctoral fellow at $inria_sop$, in the $indes$ project.
     Previously, I have been working in $citrix$ on $xenserver$ and $xcp$
@@ -62,9 +113,11 @@ let home = {
 			<li>Partial-order theory.</>
     </>
     <p>I am doing most of my software developments in $ocaml$. My projects
-    are hosted on $github$.</> >>;
-  right = <:html< <div class="image"><img src="thomas.png"/></> >>;
-}
+    are hosted on $github$.</>
+    </>
+
+    <div class="right image"><img src="thomas.png"/></>
+	>>
 
 (* Main *)
 let string_of_time () =
@@ -81,14 +134,14 @@ let create ~title ~header ~body ~footer =
     </>
     <body>
       <div class="header">$header$</>
-      <div class="body">$html_of_body body$</>
+      <div class="body">$body$</>
       <div class="footer">$footer$</>
     </>
   </>
   >>
 
 let make_nav pages =
-  let one (l,_) = html_of_link l in
+  let one (n,l,_) = <:html< <li><a href=$str:l$>$str:n$</></> >> in
   let inter = <:html< <li>::</> >> in
   let rec aux = function
     | []   -> []
@@ -106,9 +159,9 @@ let process pages =
       and <a href="http://www.github.com/samoht/cass">CaSS</>.
     >> in
   let header = make_nav pages in
-  let aux (link, contents) =
-    let chan = open_out ("www/" ^ link.href) in
-    let page = create ~title:link.text ~header ~body:contents ~footer in
+  let aux (name, link, contents) =
+    let chan = open_out ("www/" ^ link) in
+    let page = create ~title:name ~header ~body:contents ~footer in
     output_string chan (Html.to_string page);
     close_out chan 
 in
@@ -117,8 +170,8 @@ in
 let () =
   Printf.printf "Generating index.html and papers.html... %!";
   process [
-    { text="home"; href="index.html" },  home;
-    { text="papers"; href="papers.html" }, papers;
-    { text="projects"; href="projects.html" }, projects;
+    "home", "index.html", home;
+    "papers", "papers.html", papers;
+    "projects", "projects.html", projects;
   ];
   Printf.printf "[Done]\n"

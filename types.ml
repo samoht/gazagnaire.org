@@ -14,49 +14,36 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-type author = Html.link with html
+type people = {
+  name : string;
+  link: string;
+}
 
-let make_author name link =
-  { Html.text = name; Html.href = link }
+type kind =
+  | Refereed
+  | Tech
 
 type publication = {
+  authors: people list;
 	title: string;
-  authors: author list;
 	where: string;
 	year: int;
-	files: Html.link list;
-} with html
-
-type refereed = publication with html
-
-type tech = publication with html
+	kind: kind;
+	files: (string * string) list;
+}
 
 let short_name authors year =
-  let one a =
-		let space = String.rindex a ' ' in
-		String.sub a (space+1) 1 in
-  let name a =
-		let space = String.rindex a ' ' in
-		String.sub a (space+1) (String.length a - space - 1) in
+  let aux a =
+		let space = String.rindex a.name ' ' in
+		String.sub a.name (space+1) 1 in
 	let base = match authors with
-    | [a] -> name a.Html.text
-    | _   -> String.concat "" (List.map (fun x -> one x.Html.text) authors) in
+    | [a] -> a.name
+    | _   -> String.concat "" (List.map aux authors) in
   Printf.sprintf "%s%.2d" base (year - 2000)
 
-let html_of_refereed p =
-  html_of_refereed ~id:(short_name p.authors p.year) p
-
-let html_of_tech p =
-  html_of_tech ~id:(short_name p.authors p.year) p
-
-
 type project = {
-  name: string;
-  description: Html.t;
-  links: Html.link list;
-} with html
+  p_name: string;
+  p_description: Html.t;
+  p_links: (string * string) list;
+}
 
-type body = {
-  left: Html.t;
-  right: Html.t;
-} with html

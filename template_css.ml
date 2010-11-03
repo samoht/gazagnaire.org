@@ -15,8 +15,8 @@
  *)
 
 let default_font = <:css<
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #222;
+    font-family: "Trebuchet MS", Arial, Verdana;
+    color: black;
   >>
 
 let default_bg_color =
@@ -31,8 +31,8 @@ let default_padding = <:css<
     margin: 1em 1em 1em 1em;
   >>
 
-let bg_color1 = <:css< #F5D0A9 >>
-let bg_color2 = <:css< #F6E3CE >>
+let bg_color_title1 = <:css< #F5D0A9 >>
+let bg_color_title2 = <:css< #A9D0F5 >>
 
 module Body = struct
 
@@ -52,15 +52,11 @@ module Body = struct
   let columns = <:css<
     .left {
       $inner_padding$;
-      padding-left: 8%;
-      padding-right: 2%;
       float: left;
       width: 40%;
     }
     .right {
       $inner_padding$;
-      padding-right: 8%;
-      padding-left: 2%;
       float: right;
       width: 40%;
     }
@@ -157,44 +153,28 @@ module Footer = struct
     >>
 end
 
-let box_padding = <:css<
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 0;
-  padding-bottom: 2px;
-  margin: 2px;
->>
-
 module Publication = struct
   let style = 
     <:css<
-      .author {
-        display: inline;
-        font-style: italic;
-      }
-
       .publication {
-        $box_padding$;
-        background-color: $bg_color2$;
+        padding: 2px;
+        margin: 2px;
+        margin-top: 10px;
       }
 
       .publication .title {
         font-weight: bold;
-        background-color: $bg_color1$;
       }
 
-      .publication .where {
-        display: inline;
+      .refereed .title {
+        background-color: $bg_color_title1$;
+      }
+      .tech .title {
+        background-color: $bg_color_title1$;
       }
 
-      .publication .year {
-        display: inline;
-        float: right;
-        color: red;
-      }
-
-      .publication .files {
-        text-align: right;
+      .publication .authors {
+        font-style: italic;
       }
     >>
 end
@@ -203,16 +183,21 @@ module Project = struct
   let style =
     <:css<
       .project {
-        $no_padding$;
-        margin-bottom: 20px;
-        border: dashed black 1px;
+        margin: 2px;
+        margin-bottom: 10px;
       }
 
       .project .name {
-        padding-right: 10px;
         font-weight: bold;
         text-align: right;
-        background-color: $bg_color1$;
+      }
+      
+      .current .name {
+        background-color: $bg_color_title1$;
+      }
+
+      .past .name {
+        background-color: $bg_color_title1$;
       }
       
       .project .description {

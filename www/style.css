@@ -1,6 +1,6 @@
 .body {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
- 	color: #222;
+	font-family: "Trebuchet MS", Arial, Verdana;
+ 	color: black;
  	background-color: white;
  	font-size: 14px;
  	text-align: justify;
@@ -24,8 +24,6 @@
 	padding: 5%;
  	border: 0;
  	margin: 0;
- 	padding-left: 8%;
- 	padding-right: 2%;
  	float: left;
  	width: 40%;
 }
@@ -33,8 +31,6 @@
 	padding: 5%;
  	border: 0;
  	margin: 0;
- 	padding-right: 8%;
- 	padding-left: 2%;
  	float: right;
  	width: 40%;
 }
@@ -81,44 +77,36 @@
  	border-top: solid 1px grey;
  	background-color: #D8D8D8;
 }
- .author {
-	display: inline;
- 	font-style: italic;
-}
  .publication {
-	padding-left: 2px;
- 	padding-right: 2px;
- 	padding-top: 0;
- 	padding-bottom: 2px;
+	padding: 2px;
  	margin: 2px;
- 	background-color: #F6E3CE;
+ 	margin-top: 10px;
 }
  .publication .title {
 	font-weight: bold;
- 	background-color: #F5D0A9;
 }
- .publication .where {
-	display: inline;
+ .refereed .title {
+	background-color: #F5D0A9;
 }
- .publication .year {
-	display: inline;
- 	float: right;
- 	color: red;
+ .tech .title {
+	background-color: #F5D0A9;
 }
- .publication .files {
-	text-align: right;
+ .publication .authors {
+	font-style: italic;
 }
  .project {
-	margin: 0;
- 	padding: 0;
- 	margin-bottom: 20px;
- 	border: dashed black 1px;
+	margin: 2px;
+ 	margin-bottom: 10px;
 }
  .project .name {
-	padding-right: 10px;
- 	font-weight: bold;
+	font-weight: bold;
  	text-align: right;
- 	background-color: #F5D0A9;
+}
+ .current .name {
+	background-color: #F5D0A9;
+}
+ .past .name {
+	background-color: #F5D0A9;
 }
  .project .description {
 	padding: 2px;
