@@ -287,3 +287,6 @@ let ocaml = <:html< <a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</> 
 let github = <:html< <a href="http://www.github.com/samoht">github</> >>
 let ens_lyon = <:html< <a href="http://www.ens-lyon.eu">ENS Lyon</> >>
 let ens_cachan = <:html< <a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</> >>
+
+let htcaml = <:html< <a href="http://www.github.com/samoht/htcaml">HTCaML</> >>
+let cass = <:html< <a href="http://www.github.com/samoht/cass">CaSS</> >>
