@@ -91,9 +91,13 @@
  	margin-bottom: 20px;
  	border: dashed black 1px;
 }
- .publication .title {
+ .kind1 .publication .title {
 	font-weight: bold;
  	background-color: #F3F781;
+}
+ .kind2 .publication .title {
+	font-weight: bold;
+ 	background-color: #F2F5A9;
 }
  .publication .where {
 	display: inline;

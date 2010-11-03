@@ -18,15 +18,29 @@ open Types
 open Data
 open Html
 
+(* color tweaks for lists *)
+let interleave_class classes l =
+  let i = ref 0 in
+  let n = Array.length classes in
+  let get () =
+    let res = classes.(!i mod n) in
+    incr i;
+    "\"" ^ res ^ "\"" in
+  List.map (fun elt -> <:html< <div class=$str:get ()$>$elt$</> >>) l
+
+let classes = [| "kind1"; "kind2" |]
+
+let map_i g l = interleave_class classes (List.map g l)
+
 (* People *)
 let papers = {
   left = <:html<
     <h1>Refereed publications</>
-    $list:List.map html_of_refereed refereed_publications$ >>;
+    $list:map_i html_of_refereed refereed_publications$ >>;
   right = <:html<
     <p>My $dblp$ page lists some of my publications.</>
     <h1>Tech reports</>
-    $list:List.map html_of_tech tech_publications$ >>;
+    $list:map_i html_of_tech tech_publications$ >>;
 }
 
 (* Projects *)

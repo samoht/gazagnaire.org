@@ -33,6 +33,7 @@ let default_padding = <:css<
 
 let bg_color1 = <:css< #FAAC58 >>
 let bg_color2 = <:css< #F3F781 >>
+let bg_color2_light = <:css< #F2F5A9 >>
 
 module Body = struct
 
@@ -179,9 +180,14 @@ module Publication = struct
         border: dashed black 1px;
       }
 
-      .publication .title {
+      .kind1 .publication .title {
         font-weight: bold;
         background-color: $bg_color2$;
+      }
+
+      .kind2 .publication .title {
+        font-weight: bold;
+        background-color: $bg_color2_light$;
       }
 
       .publication .where {
