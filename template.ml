@@ -14,7 +14,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-open Base
+open Types
 
 (* People *)
 let html_of_people t =
@@ -46,12 +46,12 @@ let papers =
   <:html<
     <div class="left">
     <h1>Refereed publications</>
-    $list:List.map html_of_publication Init.refereed_publications$
+    $list:List.map html_of_publication Data.refereed_publications$
     </>
     <div class="right">
     <p>My <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP page</> lists some of my publications.</>
     <h1>Tech reports</>
-    $list:List.map html_of_publication Init.tech_publications$
+    $list:List.map html_of_publication Data.tech_publications$
     </>
   >>
 
@@ -69,11 +69,11 @@ let projects =
   <:html<
     <div class="left current">
       <h1>Current projects</>
-      $list:List.map html_of_project Init.current_projects$
+      $list:List.map html_of_project Data.current_projects$
     </>
     <div class="right past">
       <h1>Past projects</>
-      $list:List.map html_of_project Init.past_projects$
+      $list:List.map html_of_project Data.past_projects$
     </>
   >>
 
