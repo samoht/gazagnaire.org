@@ -86,27 +86,27 @@
  	font-style: italic;
 }
  .publication {
-	padding-left: 2px;
- 	padding-right: 2px;
- 	padding-top: 0;
- 	padding-bottom: 2px;
- 	margin: 2px;
- 	background-color: #F6E3CE;
+	margin: 0;
+ 	padding: 0;
+ 	margin-bottom: 20px;
+ 	border: dashed black 1px;
 }
  .publication .title {
 	font-weight: bold;
- 	background-color: #F5D0A9;
+ 	background-color: #F3F781;
 }
  .publication .where {
 	display: inline;
 }
  .publication .year {
-	display: inline;
+	margin-right: 4px;
+ 	display: inline;
  	float: right;
- 	color: red;
+ 	color: #DF0101;
 }
  .publication .files {
-	text-align: right;
+	margin-right: 4px;
+ 	text-align: center;
 }
  .project {
 	margin: 0;
@@ -118,7 +118,7 @@
 	padding-right: 10px;
  	font-weight: bold;
  	text-align: right;
- 	background-color: #F5D0A9;
+ 	background-color: #FAAC58;
 }
  .project .description {
 	padding: 2px;

@@ -31,8 +31,8 @@ let default_padding = <:css<
     margin: 1em 1em 1em 1em;
   >>
 
-let bg_color1 = <:css< #F5D0A9 >>
-let bg_color2 = <:css< #F6E3CE >>
+let bg_color1 = <:css< #FAAC58 >>
+let bg_color2 = <:css< #F3F781 >>
 
 module Body = struct
 
@@ -174,13 +174,14 @@ module Publication = struct
       }
 
       .publication {
-        $box_padding$;
-        background-color: $bg_color2$;
+        $no_padding$;
+        margin-bottom: 20px;
+        border: dashed black 1px;
       }
 
       .publication .title {
         font-weight: bold;
-        background-color: $bg_color1$;
+        background-color: $bg_color2$;
       }
 
       .publication .where {
@@ -188,13 +189,15 @@ module Publication = struct
       }
 
       .publication .year {
+        margin-right: 4px;
         display: inline;
         float: right;
-        color: red;
+        color: #DF0101;
       }
 
       .publication .files {
-        text-align: right;
+        margin-right: 4px;
+        text-align: center;
       }
     >>
 end
