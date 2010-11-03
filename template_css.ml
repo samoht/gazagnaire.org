@@ -242,6 +242,3 @@ let () =
   Printf.printf "Generating style.css ...%!";
   process ();
   Printf.printf "[Done]\n"
-
-
-    

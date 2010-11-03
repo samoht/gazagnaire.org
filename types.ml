@@ -20,11 +20,11 @@ let make_author name link =
   { Html.text = name; Html.href = link }
 
 type publication = {
-	title: string;
+  title: string;
   authors: author list;
-	where: string;
-	year: int;
-	files: Html.link list;
+  where: string;
+  year: int;
+  files: Html.link list;
 } with html
 
 type refereed = publication with html
@@ -33,12 +33,12 @@ type tech = publication with html
 
 let short_name authors year =
   let one a =
-		let space = String.rindex a ' ' in
-		String.sub a (space+1) 1 in
+    let space = String.rindex a ' ' in
+    String.sub a (space+1) 1 in
   let name a =
-		let space = String.rindex a ' ' in
-		String.sub a (space+1) (String.length a - space - 1) in
-	let base = match authors with
+    let space = String.rindex a ' ' in
+    String.sub a (space+1) (String.length a - space - 1) in
+  let base = match authors with
     | [a] -> name a.Html.text
     | _   -> String.concat "" (List.map (fun x -> one x.Html.text) authors) in
   Printf.sprintf "%s%.2d" base (year - 2000)

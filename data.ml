@@ -65,34 +65,34 @@ module Publis = struct
 
   type kind = Refereed | Tech
 
-	let save_custom y k a t w f =
+  let save_custom y k a t w f =
     let p = {
       authors = a;
-		  title   = t;
-		  where   = w;
-		  year    = y;
-		  files   = List.map map_link f;
+      title   = t;
+      where   = w;
+      year    = y;
+      files   = List.map map_link f;
     } in
     match k with
       | Refereed -> refereed := p :: !refereed
       | Tech     -> tech     := p :: !tech 
 
-	let save y k a t w =
+  let save y k a t w =
     save_custom y k a t w
       [ "pdf", Printf.sprintf "pub/%s.pdf" (short_name a y) ]
 
-	let causaux = "Causal Message Sequence Charts"
+  let causaux = "Causal Message Sequence Charts"
 
-	let () =
+  let () =
     save
       2010
-		  Refereed
+      Refereed
       [dave; richard; me; anil]
       "Using Functional Programming within an Industrial Product Group: Perspectives and Perceptions"
       "The 15th ACM SIGPLAN International Conference on Functional Programming";
 
     save
-		  2010
+      2010
       Refereed
       [anil; mort; rip; me; hand; tim; derek; crowcroft]
       "Turning down the LAMP: Software Specialisation for the Cloud"
@@ -100,28 +100,28 @@ module Publis = struct
 
     save
       2010
-		  Refereed
+      Refereed
       [me; anil]
       "Statically-typed value persistence for ML"
       "The 1st Workshop on Generative Technologies";
     
-	  save
+    save
       2009
-		  Refereed
+      Refereed
       [me; vincent]
       "OXenstored: an efficient hierarchical and transactional database using functional programming with reference cell comparisons"
       "The 14th ACM SIGPLAN International Conference on Functional Programming";
 
     save
       2009
-		  Refereed
+      Refereed
       [me; blaise; loic; thiagu; shaofa]
       causaux
       "Theoretical Computer Science, Volume 410, Number 41";
 
     save_custom
       2008
-		  Tech 
+      Tech 
       [me]
       "Projection of Rational Pomset Expression"
       "Draft"
@@ -129,31 +129,31 @@ module Publis = struct
 
     save
       2008
-		  Refereed
+      Refereed
       [shaofa; loic; me]
       "Logic-based Diagnosis for Distributed Systems"
-		  "'Perspectives in Concurrency -- Feststichrift for P.S. Thiagarajan'. World Scientific";
+      "'Perspectives in Concurrency -- Feststichrift for P.S. Thiagarajan'. World Scientific";
 
-		save
+    save
       2008
       Refereed
       [deb; me; blaise]
       "Small Logs for Transactional Services: Distinction is much more accurate than (Positive) Discrimination"
       "The 11th IEEE High Assurance Systems Engineering Symposium";
 
-		save_custom
+    save_custom
       2008
       Tech
       [me]
       "Langages de Scénarios: Utiliser des Ordres Partiels pour Modéliser, Vérifier et Superviser des Systèmes Parallèles et Répartis"
-		  "Ph.D. Thesis, University of Rennes 1"
+      "Ph.D. Thesis, University of Rennes 1"
       ["pdf"   , "pub/gazagnaire-phd.pdf";
        "slides", "pub/gazagnaire-phd-slides.pdf";
        "book" , "http://www.amazon.fr/Langages-Scnarios-Thomas-Gazagnaire/dp/6131513082"];
 
-	  save 
+    save 
       2007
-		  Refereed
+      Refereed
       [me; blaise; loic; thiagu; shaofa]
       causaux
       "The 18th International Conference on Concurrency Theory";
@@ -182,16 +182,16 @@ module Publis = struct
     
     save
       2006
-		  Refereed
+      Refereed
       [loic; me; blaise]
       "Diagnosis from Scenarios"
       "The 8th International Workshop on Discrete Event Systems";
     
-		save_custom
+    save_custom
       2005
       Tech
       [me; loic; claude] 
-			"Online Abstraction of Distributed Executions"
+      "Online Abstraction of Distributed Executions"
       "Research Report RR-5736"
       ["pdf", "pub/RR-5736.pdf"];
 
