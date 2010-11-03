@@ -113,7 +113,7 @@ let home =
 			<li>Partial-order theory.</>
     </>
     <p>I am doing most of my software developments in $ocaml$. My projects
-    are on hosted $github$.</>
+    are hosted on $github$.</>
     </>
 
     <div class="right image"><img src="thomas.png"/></>
