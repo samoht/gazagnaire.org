@@ -52,14 +52,14 @@ let home = {
     <p>My research interests primarily involve the application of formal methods and
     functional programming languages to complex-system engineering problems. More generally,
     I have a wide range of research and application interests including:</>
-		<ul>
+    <ul>
       <li>Cloud-computing;</>
-		  <li>Distributed and concurrent systems;</>
-			<li>Verification (model-checking) of complex systems;</>
-			<li>Automatic fault-diagnosis and monitoring of complex systems;</>
-			<li>Application of functional programming to real-world problems;</>
-			<li>Compilation and optimization techniques;</>
-			<li>Partial-order theory.</>
+      <li>Distributed and concurrent systems;</>
+      <li>Verification (model-checking) of complex systems;</>
+      <li>Automatic fault-diagnosis and monitoring of complex systems;</>
+      <li>Application of functional programming to real-world problems;</>
+      <li>Compilation and optimization techniques;</>
+      <li>Partial-order theory.</>
     </>
     <p>I am doing most of my software developments in $ocaml$. My projects
     are hosted on $github$.</> >>;
@@ -68,16 +68,16 @@ let home = {
 
 (* Main *)
 let string_of_time () =
-	let t = Unix.localtime (Unix.time ()) in
-	Printf.sprintf "%d/%d/%d" t.Unix.tm_mday (t.Unix.tm_mon + 1) (t.Unix.tm_year + 1900)
+  let t = Unix.localtime (Unix.time ()) in
+  Printf.sprintf "%d/%d/%d" t.Unix.tm_mday (t.Unix.tm_mon + 1) (t.Unix.tm_year + 1900)
 
 let create ~title ~header ~body ~footer =
   <:html<
   <html>
     <head>
       <meta http-equiv='Content-type' content='text/html; charset=UTF-8'/>
-	    <title>Thomas Gazagnaire :: $str:title$</>
-	    <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
+      <title>Thomas Gazagnaire :: $str:title$</>
+      <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
     </>
     <body>
       <div class="header">$header$</>
