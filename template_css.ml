@@ -33,7 +33,7 @@ let default_padding = <:css<
 
 let bg_color1 = <:css< #FAAC58 >>
 let bg_color2 = <:css< #F3F781 >>
-let bg_color2_light = <:css< #F2F5A9 >>
+let bg_color2_light = <:css< #F5F6CE >>
 
 module Body = struct
 
