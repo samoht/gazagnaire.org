@@ -16,6 +16,9 @@
 	font-size: 16px;
  	margin: 0;
  	padding: 0;
+ 	padding-bottom: 1px;
+ 	border-bottom: grey dashed 1px;
+ 	margin-bottom: 16px;
 }
  .image {
 	text-align: center;

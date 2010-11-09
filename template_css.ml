@@ -82,6 +82,9 @@ module Body = struct
     h1 {
       font-size: 16px;
       $no_padding$;
+      padding-bottom: 1px;
+      border-bottom: grey dashed 1px;
+      margin-bottom: 16px;
     }
     
     .image {
