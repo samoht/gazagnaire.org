@@ -44,9 +44,12 @@
  .header {
 	margin: 0;
  	padding: 0;
- 	background-color: #2E2E2E;
  	color: white;
  	font-size: 14px;
+ 	background: #4e4e4e;
+ 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= black, endColorstr= #4e4e4e);
+ 	background: -webkit-gradient(linear, left top, left bottom, from(black), to(#4e4e4e));
+ 	background: -moz-linear-gradient(top, black, #4e4e4e);
  	color: white;
  	padding-top: 2em;
  	padding-bottom: 0.5em;

@@ -41,7 +41,7 @@ module Body = struct
     $default_font$;
     background-color: white; 
     font-size: 14px;
-    text-align:justify;
+    text-align: justify;
     >>
 
   let inner_padding = <:css<
@@ -100,7 +100,9 @@ module Header = struct
 
   let nav = <:css< .nav >>
 
-  let bg_color = <:css< background-color: #2E2E2E; >>
+  let bg_color_low = <:css< #4e4e4e >>
+  let bg_color_high = <:css< black >>
+
   let fonts = <:css<
     color: white;
     font-size: 14px;
@@ -134,8 +136,8 @@ module Header = struct
   let style = <:css<
     .header {
       $no_padding$;
-      $bg_color$;
       $fonts$;
+      $Css.gradient bg_color_low bg_color_low bg_color_high$;
       color: white;
       padding-top: 2em;
       padding-bottom: 0.5em;
