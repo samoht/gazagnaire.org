@@ -89,7 +89,7 @@ let create ~title ~header ~body ~footer =
   <:html<
   <html>
     <head>
-      <meta http-equiv='Content-type' content='text/html; charset=UTF-8'/>
+      <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
       <title>Thomas Gazagnaire :: $str:title$</title>
       <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
     </head>
@@ -113,7 +113,6 @@ let make_nav pages =
   >>
 
 let process pages =
-  Html.set_encoding `ISO_8859_1;
   let footer = <:html<
       &copy; 2010 Thomas Gazagnaire ::
       Last modified : $str:string_of_time ()$ ::
