@@ -19,9 +19,19 @@ type author = Html.link with html
 let make_author name link =
   { Html.text = name; Html.href = link }
 
+type authors = author list
+
+let html_of_authors la =
+  let rec aux = function
+    | [a]   -> <:html< $html_of_author a$.>>
+    | [a;b] -> <:html< $html_of_author a$ and $html_of_author b$.>>
+    | a::t  -> <:html< $html_of_author a$, $aux t$>>
+    | []    -> <:html< >> in
+  aux la
+
 type publication = {
   title: string;
-  authors: author list;
+  authors: authors;
   where: string;
   year: int;
   files: Html.link list;
