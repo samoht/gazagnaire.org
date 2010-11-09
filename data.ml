@@ -241,10 +241,10 @@ module Projects = struct
       "dyntype / ORM / Shelf"
       <:html<
       A collection of tools using dynamic types in OCaml.
-      <em>Dyntype</> is a Camlp4 extension adding dynamic types to OCaml.
-      <em>ORM</> uses dynamic types to provide a complete and efficient
+      <em>Dyntype</em> is a Camlp4 extension adding dynamic types to OCaml.
+      <em>ORM</em> uses dynamic types to provide a complete and efficient
         Object-Relationship Mapping to SQlite3 for OCaml.
-      <em>Shelf</> uses dynamic types to provide a collection
+      <em>Shelf</em> uses dynamic types to provide a collection
         of parsers and printers to JSON, S-expressions, HTML, ... >>
       [ "paper"      , "pub/GM10.pdf";
         "dyntype.git", "http://www.github.com/mirage/dyntype";
@@ -275,18 +275,18 @@ end
 let current_projects = List.rev !Projects.current
 let past_projects = List.rev !Projects.past
 
-let dblp = <:html< <a href ="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</> >>
-let inria_sop = <:html< <a href="http://www-sop.inria.fr">INRIA sophia-antipolis</> >>
-let indes = <:html< <a href="http://www-sop.inria.fr/indes/">INDES</> >>
-let irisa = <:html< <a href="http://www.irisa.fr/">IRISA</> >>
-let distribcom = <:html< <a href="http://www.irisa.fr/distribcom/">DistribCom</> >>
-let citrix = <:html< <a href="http://www.citrix.com">Citrix</> >>
-let xenserver = <:html< <a href="www.citrix.com/xenserver">XenServer</> >>
-let xcp = <:html< <a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</> >>
-let ocaml = <:html< <a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</> >>
-let github = <:html< <a href="http://www.github.com/samoht">github</> >>
-let ens_lyon = <:html< <a href="http://www.ens-lyon.eu">ENS Lyon</> >>
-let ens_cachan = <:html< <a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</> >>
+let dblp = <:html<<a href ="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</a>&>>
+let inria_sop = <:html<<a href="http://www-sop.inria.fr">INRIA sophia-antipolis</a>&>>
+let indes = <:html<<a href="http://www-sop.inria.fr/indes/">INDES</a>&>>
+let irisa = <:html<<a href="http://www.irisa.fr/">IRISA</a>&>>
+let distribcom = <:html<<a href="http://www.irisa.fr/distribcom/">DistribCom</a>&>>
+let citrix = <:html<<a href="http://www.citrix.com">Citrix</a>&>>
+let xenserver = <:html<<a href="www.citrix.com/xenserver">XenServer</a>&>>
+let xcp = <:html<<a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</a>&>>
+let ocaml = <:html<<a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</a>&>>
+let github = <:html<<a href="http://www.github.com/samoht">github</a>&>>
+let ens_lyon = <:html<<a href="http://www.ens-lyon.eu">ENS Lyon</a>&>>
+let ens_cachan = <:html<<a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</a>&>>
 
-let htcaml = <:html< <a href="http://www.github.com/samoht/htcaml">HTCaML</> >>
-let cass = <:html< <a href="http://www.github.com/samoht/cass">CaSS</> >>
+let htcaml = <:html<<a href="http://www.github.com/samoht/htcaml">HTCaML</a>&>>
+let cass = <:html<<a href="http://www.github.com/samoht/cass">CaSS</a>&>>

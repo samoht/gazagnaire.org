@@ -25,8 +25,8 @@ let interleave_class classes l =
   let get () =
     let res = classes.(!i mod n) in
     incr i;
-    "\"" ^ res ^ "\"" in
-  List.map (fun elt -> <:html< <div class=$str:get ()$>$elt$</> >>) l
+    res in
+  List.map (fun elt -> <:html< <div class=$str:get ()$>$elt$</div> >>) l
 
 let classes = [| "kind1"; "kind2" |]
 
@@ -35,49 +35,49 @@ let map_i g l = interleave_class classes (List.map g l)
 (* People *)
 let papers = {
   left = <:html<
-    <h1>Refereed publications</>
+    <h1>Refereed publications</h1>
     $list:map_i html_of_refereed refereed_publications$ >>;
   right = <:html<
-    <p>My $dblp$ page lists some of my publications.</>
-    <h1>Tech reports</>
+    <p>My $dblp$ page lists some of my publications.</p>
+    <h1>Tech reports</h1>
     $list:map_i html_of_tech tech_publications$ >>;
 }
 
 (* Projects *)
 let projects = {
   left = <:html<
-    <h1>Current projects</>
+    <h1>Current projects</h1>
     $list:List.map html_of_project current_projects$ >>;
   right = <:html<
-    <h1>Past projects</>
+    <h1>Past projects</h1>
     $list:List.map html_of_project past_projects$ >>;
 }
 
 (* Home page *)
 let home = {
   left = <:html<
-    <h1>Thomas Gazagnaire</>
+    <h1>Thomas Gazagnaire</h1>
     <p>I am a postdoctoral fellow at $inria_sop$, in the $indes$ project.
     Previously, I have been working in $citrix$ on $xenserver$ and $xcp$
     as a senior software engineer.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
-    I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</>
+    I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
 
     <p>My research interests primarily involve the application of formal methods and
     functional programming languages to complex-system engineering problems. More generally,
-    I have a wide range of research and application interests including:</>
+    I have a wide range of research and application interests including:</p>
     <ul>
-      <li>Cloud-computing;</>
-      <li>Distributed and concurrent systems;</>
-      <li>Verification (model-checking) of complex systems;</>
-      <li>Automatic fault-diagnosis and monitoring of complex systems;</>
-      <li>Application of functional programming to real-world problems;</>
-      <li>Compilation and optimization techniques;</>
-      <li>Partial-order theory.</>
-    </>
+      <li>Cloud-computing;</li>
+      <li>Distributed and concurrent systems;</li>
+      <li>Verification (model-checking) of complex systems;</li>
+      <li>Automatic fault-diagnosis and monitoring of complex systems;</li>
+      <li>Application of functional programming to real-world problems;</li>
+      <li>Compilation and optimization techniques;</li>
+      <li>Partial-order theory.</li>
+    </ul>
     <p>I am doing most of my software developments in $ocaml$. My projects
-    are hosted on $github$.</> >>;
-  right = <:html< <div class="image"><img src="thomas.png"/></> >>;
+    are hosted on $github$.</p> >>;
+  right = <:html< <div class="image"><img src="thomas.png"/></div> >>;
 }
 
 (* Main *)
@@ -90,26 +90,26 @@ let create ~title ~header ~body ~footer =
   <html>
     <head>
       <meta http-equiv='Content-type' content='text/html; charset=UTF-8'/>
-      <title>Thomas Gazagnaire :: $str:title$</>
+      <title>Thomas Gazagnaire :: $str:title$</title>
       <link rel='stylesheet' href='style.css' type='text/css' media='all'/>
-    </>
+    </head>
     <body>
-      <div class="header">$header$</>
-      <div class="body">$html_of_body body$</>
-      <div class="footer">$footer$</>
-    </>
-  </>
+      <div class="header">$header$</div>
+      <div class="body">$html_of_body body$</div>
+      <div class="footer">$footer$</div>
+    </body>
+  </html>
   >>
 
 let make_nav pages =
   let one (l,_) = html_of_link l in
-  let inter = <:html< <li>::</> >> in
+  let inter = <:html< <li>::</li> >> in
   let rec aux = function
     | []   -> []
     | [h]  -> [one h]
     | h::t -> (one h) :: inter :: aux t in
   <:html<
-    <div class="nav"><ul>$list:aux pages$</></>
+    <div class="nav"><ul>$list:aux pages$</ul></div>
   >>
 
 let process pages =
