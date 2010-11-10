@@ -32,8 +32,8 @@ let default_padding = <:css<
   >>
 
 let bg_color1 = <:css< #FAAC58 >>
-let bg_color2 = <:css< #F3F781 >>
-let bg_color2_light = <:css< #F5F6CE >>
+let bg_color2 = <:css< #f47a20 >>
+let bg_color2_light = <:css< #faa51a >>
 
 module Body = struct
 
@@ -137,7 +137,7 @@ module Header = struct
     .header {
       $no_padding$;
       $fonts$;
-      $Css.gradient bg_color_low bg_color_low bg_color_high$;
+      $Css.gradient ~low:bg_color_low ~high:bg_color_high$;
       color: white;
       padding-top: 2em;
       padding-bottom: 0.5em;
@@ -182,17 +182,18 @@ module Publication = struct
       .publication {
         $no_padding$;
         margin-bottom: 20px;
-        border: dashed black 1px;
       }
 
       .kind1 .publication .title {
         font-weight: bold;
-        background-color: $bg_color2$;
+        $Css.gradient ~low:bg_color2 ~high:bg_color2_light$;
+        $Css.rounded$;
       }
 
       .kind2 .publication .title {
         font-weight: bold;
-        background-color: $bg_color2_light$;
+        $Css.gradient ~low:bg_color2_light ~high:bg_color2$;
+        $Css.rounded$;
       }
 
       .publication .where {
