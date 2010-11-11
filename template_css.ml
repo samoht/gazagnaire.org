@@ -182,18 +182,22 @@ module Publication = struct
       .publication {
         $no_padding$;
         margin-bottom: 20px;
+        $Css.rounded$;
+        background-color: #FFFFCC;
+      }
+
+      .publication .title {
+        font-weight: bold;
+        text-align: center;
+        $Css.top_rounded$;
       }
 
       .kind1 .publication .title {
-        font-weight: bold;
         $Css.gradient ~low:bg_color2 ~high:bg_color2_light$;
-        $Css.rounded$;
       }
 
       .kind2 .publication .title {
-        font-weight: bold;
         $Css.gradient ~low:bg_color2_light ~high:bg_color2$;
-        $Css.rounded$;
       }
 
       .publication .where {
@@ -204,7 +208,9 @@ module Publication = struct
         margin-right: 4px;
         display: inline;
         float: right;
-        color: #DF0101;
+        $Css.rounded$;
+        padding: 2px;
+        color: #CC3300;
       }
 
       .publication .files {

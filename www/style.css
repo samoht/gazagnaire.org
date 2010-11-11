@@ -95,34 +95,40 @@
 	margin: 0;
  	padding: 0;
  	margin-bottom: 20px;
+ 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+ 	-webkit-border-radius: .5em;
+ 	-moz-border-radius: .5em;
+ 	border-radius: .5em;
+ 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	background-color: #FFFFCC;
+}
+ .publication .title {
+	font-weight: bold;
+ 	text-align: center;
+ 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+ 	-webkit-border-top-left-radius: .5em;
+ 	-webkit-border-top-right-radius: .5em;
+ 	-moz-border-radius-topleft: .5em;
+ 	-moz-border-radius-topright: .5em;
+ 	border-top-left-radius: .5em;
+ 	border-top-right-radius: .5em;
+ 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
  .kind1 .publication .title {
-	font-weight: bold;
- 	background: #f47a20;
+	background: #f47a20;
  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #faa51a, endColorstr = #f47a20);
  	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
  	background: -moz-linear-gradient(top, #faa51a, #f47a20);
- 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
- 	-webkit-border-radius: .5em;
- 	-moz-border-radius: .5em;
- 	border-radius: .5em;
- 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
- 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
- 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
  .kind2 .publication .title {
-	font-weight: bold;
- 	background: #faa51a;
+	background: #faa51a;
  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = #f47a20, endColorstr = #faa51a);
  	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
  	background: -moz-linear-gradient(top, #f47a20, #faa51a);
- 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
- 	-webkit-border-radius: .5em;
- 	-moz-border-radius: .5em;
- 	border-radius: .5em;
- 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
- 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
- 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
  .publication .where {
 	display: inline;
@@ -131,7 +137,15 @@
 	margin-right: 4px;
  	display: inline;
  	float: right;
- 	color: #DF0101;
+ 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+ 	-webkit-border-radius: .5em;
+ 	-moz-border-radius: .5em;
+ 	border-radius: .5em;
+ 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+ 	padding: 2px;
+ 	color: #CC3300;
 }
  .publication .files {
 	margin-right: 4px;
