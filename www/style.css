@@ -65,8 +65,24 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
  	-moz-border-radius: .5em;
  	border-radius: .5em;
 }
+ .body h2 {
+	padding-left: 1em;
+ 	margin-top: 1em;
+ 	margin-bottom: 1em;
+ 	border-bottom: 1px dashed #7F7B7B;
+}
+ .body .image img {
+	width: 80%;
+}
  .body .image {
-	text-align: center;
+	width: 30%;
+ 	float: left;
+ 	padding: 5%;
+}
+ .body .contact {
+	padding: 5%;
+ 	float: right;
+ 	width: 50%;
 }
  .header {
 	color: #888;
@@ -88,8 +104,6 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 }
  .header .nav li {
 	display: inline;
- 	border-left: 1px #888;
- 	border-right: 1p #888;
 }
  .header .nav a {
 	color: #888;

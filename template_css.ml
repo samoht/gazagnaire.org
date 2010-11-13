@@ -111,9 +111,28 @@ module Body = struct
       font-weight: bold;
       $Css.rounded$;
     }
-    
+
+    .body h2 {
+      padding-left: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      border-bottom: 1px dashed $fg_color$;
+    }
+
+    .body .image img {
+      width: 80%;
+    }
+
     .body .image {
-      text-align: center;
+      width: 30%;
+      float: left;
+      padding: 5%;
+    }
+
+    .body .contact {
+      padding: 5%;
+      float: right;
+      width: 50%;
     }
     >>
 
@@ -145,8 +164,6 @@ module Header = struct
     
     $nav$ li {
       display: inline;
-      border-left: 1px $fg_color$;
-      border-right: 1p $fg_color$;
     }
 
     $nav$ a {

@@ -51,7 +51,8 @@ let home = Two_columns {
     as a senior software engineer.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
     I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
-
+  
+    <h2>Research</h2>
     <p>My research interests primarily involve the application of formal methods and
     functional programming languages to complex-system engineering problems. More generally,
     I have a wide range of research and application interests including:</p>
@@ -64,9 +65,25 @@ let home = Two_columns {
       <li>Compilation and optimization techniques;</li>
       <li>Partial-order theory.</li>
     </ul>
+    <br/>
     <p>I am doing most of my software developments in $ocaml$. My projects
-    are hosted on $github$.</p> >>;
-  right = <:html< <div class="image"><img src="thomas.png"/></div> >>;
+    are hosted on $github$.</p>
+  >>;
+  right = <:html<
+    <h1>Contact</h1>
+    <div class="image"><img src="thomas.png"/></div>
+    <div class="contact">
+      <p>
+        <a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a><br/>
+        <a href="mailto:thomas.gazagnaire@inria.fr">thomas.gazagnaire@inria.fr</a></p>
+     <p>
+      <h2>Office</h2>
+       INRIA Sophia Antipolis<br/>
+       2004 route des Lucioles - BP 93<br/>
+       F-06902 Sophia Antipolis, Cedex,<br/>
+       France</p>
+   </div>
+  >>;
 }
 
 (* Main *)
