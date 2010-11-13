@@ -14,33 +14,33 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-let default_font = <:css<
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #222;
+let color1 = <:css< #42A2D2 >>
+let color2 = <:css< whiteSmoke >>
+
+let dashed_links name color =
+  <:css<
+      $name$ a {
+        color: $color$;
+        text-decoration: none;
+        border-bottom: 1px dashed $color$;
+      }
+
+      $name$ a:hover {
+        color: $color$;
+        text-decoration: none;
+        border-bottom: 1px solid $color$;
+      }
   >>
-
-let default_bg_color =
-  <:css< background-color: #D8D8D8; >>
-
-let no_padding = <:css<
-    margin: 0;
-    padding: 0;
-  >>
-
-let default_padding = <:css<
-    margin: 1em 1em 1em 1em;
-  >>
-
-let bg_color1 = <:css< #FAAC58 >>
-let bg_color2 = <:css< #f47a20 >>
-let bg_color2_light = <:css< #faa51a >>
 
 module Body = struct
 
+  let bg_color = <:css< white >>
+  let fg_color = <:css< #7F7B7B >>
+
   let fonts = <:css<
-    $default_font$;
-    background-color: white; 
-    font-size: 14px;
+    background-color: $bg_color$;
+    color: $fg_color$;
+    font-size: 0.9em;
     text-align: justify;
     >>
 
@@ -51,14 +51,19 @@ module Body = struct
     >>
 
   let columns = <:css<
-    .left {
+    .body .two_columns {
+     overflow: hidden;
+    }
+
+    .body .two_columns .left {
       $inner_padding$;
       padding-left: 8%;
       padding-right: 2%;
       float: left;
       width: 40%;
     }
-    .right {
+
+    .body .two_columns .right {
       $inner_padding$;
       padding-right: 8%;
       padding-left: 2%;
@@ -67,81 +72,104 @@ module Body = struct
     }
     >>
 
+  let one_column = <:css<
+    .body .one_column {
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+    >>
+
   let style = <:css<
+    $one_column$
+    $columns$
+
     .body {
       $fonts$;
       float: left;
       width: 100%;
     }
 
-    body {
-      $no_padding$;
-      $default_bg_color$;
+    .body p, .body ul {
+      padding: 0.5em;
     }
 
-    h1 {
-      font-size: 16px;
-      $no_padding$;
-      padding-bottom: 1px;
-      border-bottom: grey dashed 1px;
-      margin-bottom: 16px;
+    .body li {
+      margin-left: 4em;
+    }
+
+    $dashed_links <:css< .body >> fg_color$
+
+    .body h1 {
+      background-color: $color1$;
+      color: $bg_color$;
+      margin: 0.5em 0px 1em;
+      padding: 0.3em;
+      font-size: 1.5em;
+      margin-bottom: 0.7em;
+      font-weight: bold;
+      $Css.rounded$;
     }
     
-    .image {
+    .body .image {
       text-align: center;
     }
-
-    $columns$
     >>
 
 end
 
 module Header = struct
 
-  let nav = <:css< .nav >>
+  let bg_color = <:css< #363842 >>
+  let fg_color = <:css< #888 >>
 
-  let bg_color_low = <:css< #4e4e4e >>
-  let bg_color_high = <:css< black >>
+  let nav = <:css< .header .nav >>
 
   let fonts = <:css<
-    color: white;
-    font-size: 14px;
+    color: $fg_color$;
+    background-color: $bg_color$;
+    font-size: 0.9em;
+    line-height: 2em;
+    text-align: center;
     >>
 
   let nav_style = <:css<
     $nav$ {
-      text-align: center;
       $fonts$;
     }
   
     $nav$ ul {
-      $no_padding$;
       display: block;
     }
     
     $nav$ li {
       display: inline;
+      border-left: 1px $fg_color$;
+      border-right: 1p $fg_color$;
     }
 
     $nav$ a {
-      $fonts$;
+      color: $fg_color$;
       text-decoration: none;
     }
 
     $nav$ a:hover {
-      background-color: grey;
+      color: $fg_color$;
+      text-decoration: underline;
+    }
+
+    $nav$ #current {
+      display: inline;
+      background-color: $Body.bg_color$;
+      padding: 1em;
     }
     >>
 
   let style = <:css<
     .header {
-      $no_padding$;
       $fonts$;
-      $Css.gradient ~low:bg_color_low ~high:bg_color_high$;
-      color: white;
-      padding-top: 2em;
-      padding-bottom: 0.5em;
-      border-bottom: solid 1px grey;
+      background-color: $bg_color$;
     } 
     $nav_style$
     >>
@@ -149,27 +177,25 @@ module Header = struct
 end
 
 module Footer = struct
-  let fonts = <:css< color: grey; font-size: 10px; text-align: center; >>
+  let bg_color = <:css< #363842 >>
+  let fg_color = <:css< #888 >>
+
+  let fonts = <:css<
+    color: $fg_color$;
+    background-color: $bg_color$;
+    font-size: 0.6em;
+    text-align: center;
+  >>
 
   let style = <:css<
     .footer {
-      $no_padding$;
       $fonts$;
       clear: both;
-      padding-bottom: 15em;
-      border-top: solid 1px grey;
-      $default_bg_color$;
+      padding-top: 0.5em;
     }
+    $dashed_links <:css< .footer >> fg_color$
     >>
 end
-
-let box_padding = <:css<
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 0;
-  padding-bottom: 2px;
-  margin: 2px;
->>
 
 module Publication = struct
   let style = 
@@ -179,25 +205,25 @@ module Publication = struct
         font-style: italic;
       }
 
+      $dashed_links <:css< .publication .author >> Body.fg_color$
+
       .publication {
-        $no_padding$;
-        margin-bottom: 20px;
+        margin: 1em;
+        padding: 0.5em;
+        $Css.box_shadow$;
         $Css.rounded$;
-        background-color: #FFFFCC;
+      }
+      
+      .kind1 .publication {
+        background-color: $color2$;
+      }
+
+      .kind2 .publication {
+        background-color: $Body.bg_color$;
       }
 
       .publication .title {
-        font-weight: bold;
-        text-align: center;
-        $Css.top_rounded$;
-      }
-
-      .kind1 .publication .title {
-        $Css.gradient ~low:bg_color2 ~high:bg_color2_light$;
-      }
-
-      .kind2 .publication .title {
-        $Css.gradient ~low:bg_color2_light ~high:bg_color2$;
+        color: $color1$;
       }
 
       .publication .where {
@@ -224,16 +250,18 @@ module Project = struct
   let style =
     <:css<
       .project {
-        $no_padding$;
-        margin-bottom: 20px;
-        border: dashed black 1px;
+        margin: 2em;
+        padding: 0.5em;
+        background-color: $color2$;
+        $Css.box_shadow$;
+        $Css.rounded$;
       }
 
       .project .name {
         padding-right: 10px;
         font-weight: bold;
         text-align: right;
-        background-color: $bg_color1$;
+        color: $color1$;
       }
       
       .project .description {
@@ -247,11 +275,17 @@ module Project = struct
 end
 
 let css = <:css<
+  $Css.reset_padding$
   $Body.style$
   $Header.style$
   $Footer.style$
   $Publication.style$
   $Project.style$
+
+  body {
+    font-family: arial, verdana, sans-serif;
+    background-color: $Footer.bg_color$;
+  }
 >>
 
 let process () =

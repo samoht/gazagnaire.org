@@ -66,7 +66,14 @@ type project = {
   links: Html.link list;
 } with html
 
-type body = {
+type two_columns = {
   left: Html.t;
   right: Html.t;
 } with html
+
+type one_column = Html.t with html
+
+type body =
+  | One_column of one_column
+  | Two_columns of two_columns
+with html
