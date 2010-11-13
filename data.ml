@@ -281,7 +281,7 @@ let indes = <:html<<a href="http://www-sop.inria.fr/indes/">INDES</a>&>>
 let irisa = <:html<<a href="http://www.irisa.fr/">IRISA</a>&>>
 let distribcom = <:html<<a href="http://www.irisa.fr/distribcom/">DistribCom</a>&>>
 let citrix = <:html<<a href="http://www.citrix.com">Citrix</a>&>>
-let xenserver = <:html<<a href="www.citrix.com/xenserver">XenServer</a>&>>
+let xenserver = <:html<<a href="http://www.citrix.com/xenserver">XenServer</a>&>>
 let xcp = <:html<<a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</a>&>>
 let ocaml = <:html<<a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</a>&>>
 let github = <:html<<a href="http://www.github.com/samoht">github</a>&>>

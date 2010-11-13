@@ -179,7 +179,6 @@ module Header = struct
       background-color: $Body.bg_color$;
       padding-left: 1em;
       padding-right: 1em;
-      $Css.text_shadow$;
       $Css.box_shadow$;
     }
     >>
