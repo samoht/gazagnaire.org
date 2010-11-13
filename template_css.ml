@@ -87,7 +87,6 @@ module Body = struct
 
     .body {
       $fonts$;
-      float: left;
       width: 100%;
     }
 
@@ -150,20 +149,18 @@ module Header = struct
     background-color: $bg_color$;
     font-size: 0.9em;
     line-height: 2em;
-    text-align: center;
     >>
 
   let nav_style = <:css<
     $nav$ {
       $fonts$;
+      margin-left: 10%;
     }
-  
-    $nav$ ul {
-      display: block;
-    }
-    
+
     $nav$ li {
-      display: inline;
+      display: inline-block;
+      padding-left: 1em;
+      padding-right: 1em;
     }
 
     $nav$ a {
@@ -173,13 +170,17 @@ module Header = struct
 
     $nav$ a:hover {
       color: $fg_color$;
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 1px solid $fg_color$;
     }
 
     $nav$ #current {
-      display: inline;
+      display: inline-block;
       background-color: $Body.bg_color$;
-      padding: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      $Css.text_shadow$;
+      $Css.box_shadow$;
     }
     >>
 
@@ -209,6 +210,7 @@ module Footer = struct
       $fonts$;
       clear: both;
       padding-top: 0.5em;
+      padding-bottom: 40px;
     }
     $dashed_links <:css< .footer >> fg_color$
     >>
