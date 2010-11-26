@@ -82,8 +82,8 @@ module Body = struct
     >>
 
   let style = <:css<
-    $one_column$
-    $columns$
+    $one_column$;
+    $columns$;
 
     .body {
       $fonts$;
@@ -98,7 +98,7 @@ module Body = struct
       margin-left: 4em;
     }
 
-    $dashed_links <:css< .body >> fg_color$
+    $dashed_links <:css< .body >> fg_color$;
 
     .body h1 {
       background-color: $color1$;
@@ -223,7 +223,7 @@ module Publication = struct
         font-style: italic;
       }
 
-      $dashed_links <:css< .publication .author >> Body.fg_color$
+      $dashed_links <:css< .publication .author >> Body.fg_color$;
 
       .publication {
         margin: 1em;
@@ -293,12 +293,12 @@ module Project = struct
 end
 
 let css = <:css<
-  $Css.reset_padding$
-  $Body.style$
-  $Header.style$
-  $Footer.style$
-  $Publication.style$
-  $Project.style$
+  $Css.reset_padding$;
+  $Body.style$;
+  $Header.style$;
+  $Footer.style$;
+  $Publication.style$;
+  $Project.style$;
 
   body {
     font-family: arial, verdana, sans-serif;
