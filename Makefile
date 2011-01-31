@@ -1,4 +1,4 @@
-DEST = john@doo.com:~/public_html
+include Makefile.private # should define DEST
 
 all: html css
 
