@@ -46,7 +46,7 @@ let paulo = make_author "P. Favaro" "http://www.eps.hw.ac.uk/~pf21/"
 let hailin = make_author "H. Jin" "http://vision.ucla.edu/~hljin/"
 
 let manuel = make_author "M. Serrano" "http://www-sop.inria.fr/members/Manuel.Serrano/"
-let anil = make_author  "A. Madhavappeddy" "http://anil.recoil.org"
+let anil = make_author  "A. Madhavapeddy" "http://anil.recoil.org"
 let mort = make_author "R. Mortier" "http://www.cs.nott.ac.uk/~rmm/"
 let rip = make_author "R. Sohan" "http://www.cl.cam.ac.uk/~rss39/"
 let hand = make_author "S. Hand" "http://www.cl.cam.ac.uk/~smh22/"
