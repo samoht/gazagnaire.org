@@ -25,7 +25,8 @@ let shaofa = make_author "S. Yang" "http://www.irisa.fr/distribcom/Personal_Page
 let thiagu = make_author "P.S. Thiagarajan" "http://www.comp.nus.edu.sg/~thiagu/"
 let deb = make_author "D. Biswas" "http://www.linkedin.com/pub/1/526/397"
 let claude = make_author "C. Jard" "http://www.dit.bretagne.ens-cachan.fr/People/Claude.Jard/"
-    
+let herve = make_author "H. Marchand" "http://www.irisa.fr/prive/hmarchan/"
+
 let luc = make_author "L. Bougé" "http://www.dit.bretagne.ens-cachan.fr/People/Luc.Bouge/"
 let francois = make_author "F. Bodin" "http://www.irisa.fr/caps/people/bodin/index.htm"
 
@@ -84,6 +85,20 @@ module Publis = struct
   let causaux = "Causal Message Sequence Charts"
 
   let () =
+    save
+      2011
+      Tech
+      [loic; herve; blaise; me]
+      "Diagnosis from Scenarios, and Applications to Security"
+      "Draft";
+
+    save
+      2011
+      Tech
+      [me; anil]
+      "Dynamics for ML using Meta-Programming"
+      "Draft";
+    
     save
       2010
       Refereed
