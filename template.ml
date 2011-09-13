@@ -46,7 +46,7 @@ let projects = Two_columns {
 let home = Two_columns {
   left = <:html<
     <h1>Thomas Gazagnaire</h1>
-    <p>I am R&amp;D engineer at $ocamlpro$ since April 2011. 
+    <p>I am Chief Technical Officier at $ocamlpro$ since April 2011. 
     Previously, I have been working as postdoctoral fellow at $inria_sop$, in the $indes$ project
     and as senior software engineer at $citrix$ on the $xenserver$ and $xcp$ softwares.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
@@ -75,7 +75,7 @@ let home = Two_columns {
     <div class="contact">
       <p>
         <a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a><br/>
-        <a href="mailto:thomas@ocamlpro.com">thomas@camlpro.com</a></p>
+        <a href="mailto:thomas@ocamlpro.com">thomas@ocamlpro.com</a></p>
      <p>
       <h2>Office</h2>
       Société OCamlPro SAS<br/>
