@@ -94,10 +94,10 @@ module Publis = struct
 
     save
       2011
-      Tech
+      Refereed
       [me; anil]
       "Dynamics for ML using Meta-Programming"
-      "Draft";
+      "Electronic Notes in Theoretical Computer Science (ENTCS)";
     
     save
       2010
