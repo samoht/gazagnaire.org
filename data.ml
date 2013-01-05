@@ -60,7 +60,7 @@ let p_weis = make_author "P. Weis" "http://pauillac.inria.fr/~weis/"
 let map_link (t,l) =  { text="["^t^"]"; href=l }
 
 module Publis = struct
- 
+
   let refereed = ref []
   let tech = ref []
 
@@ -76,7 +76,7 @@ module Publis = struct
     } in
     match k with
       | Refereed -> refereed := p :: !refereed
-      | Tech     -> tech     := p :: !tech 
+      | Tech     -> tech     := p :: !tech
 
   let save y k a t w =
     save_custom y k a t w
@@ -98,7 +98,7 @@ module Publis = struct
       [me; anil]
       "Dynamics for ML using Meta-Programming"
       "Electronic Notes in Theoretical Computer Science (ENTCS)";
-    
+
     save
       2010
       Refereed
@@ -119,7 +119,7 @@ module Publis = struct
       [me; anil]
       "Statically-typed value persistence for ML"
       "The 1st Workshop on Generative Technologies";
-    
+
     save
       2009
       Refereed
@@ -136,7 +136,7 @@ module Publis = struct
 
     save_custom
       2008
-      Tech 
+      Tech
       [me]
       "Projection of Rational Pomset Expression"
       "Draft"
@@ -166,7 +166,7 @@ module Publis = struct
        "slides", "pub/gazagnaire-phd-slides.pdf";
        "book" , "http://www.amazon.fr/Langages-Scnarios-Thomas-Gazagnaire/dp/6131513082"];
 
-    save 
+    save
       2007
       Refereed
       [me; blaise; loic; thiagu; shaofa]
@@ -186,7 +186,7 @@ module Publis = struct
       [me; claude]
       "Abstraire à la Volée les Evénements d'un Système Réparti"
       "La 7 ème Conférence Internationale sur les NOuvelles TEchnologies de la REpartition";
-    
+
     save_custom
       2007
       Tech
@@ -194,18 +194,18 @@ module Publis = struct
       causaux
       "Research Report RR-6301"
       ["pdf", "pub/RR-6301.pdf"];
-    
+
     save
       2006
       Refereed
       [loic; me; blaise]
       "Diagnosis from Scenarios"
       "The 8th International Workshop on Discrete Event Systems";
-    
+
     save_custom
       2005
       Tech
-      [me; loic; claude] 
+      [me; loic; claude]
       "Online Abstraction of Distributed Executions"
       "Research Report RR-5736"
       ["pdf", "pub/RR-5736.pdf"];
@@ -221,7 +221,7 @@ module Projects = struct
 
   let save n d l =
     current := { name = n; description = d; links = List.map map_link l } :: !current
-  
+
   let save_past n d l =
     past := { name = n; description = d; links = List.map map_link l } :: !past
 
@@ -284,7 +284,7 @@ module Projects = struct
         "SD.tgz"     , "tools/ScenarioDoctor.tar.gz";
         "aDEx.tgz"   , "tools/ADEx.tar.gz" ]
 
-      
+
 end
 
 let current_projects = List.rev !Projects.current
