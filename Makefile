@@ -1,12 +1,14 @@
 include Makefile.private # should define DEST
 
+BUILD = ocamlbuild -use-ocamlfind
+
 all: html css
 
 html:
-	ocamlbuild template.byte --
+	$(BUILD) template.byte --
 
 css:
-	ocamlbuild template_css.byte --
+	$(BUILD) template_css.byte --
 
 clean:
 	rm -f *.cmo *.cmi *~ template.byte template_css.byte

@@ -187,7 +187,7 @@ module Header = struct
     .header {
       $fonts$;
       background-color: $bg_color$;
-    } 
+    }
     $nav_style$
     >>
 
@@ -216,7 +216,7 @@ module Footer = struct
 end
 
 module Publication = struct
-  let style = 
+  let style =
     <:css<
       .author {
         display: inline;
@@ -231,7 +231,7 @@ module Publication = struct
         $Css.box_shadow$;
         $Css.rounded$;
       }
-      
+
       .kind1 .publication {
         background-color: $color2$;
       }
@@ -281,7 +281,7 @@ module Project = struct
         text-align: right;
         color: $color1$;
       }
-      
+
       .project .description {
         padding: 2px;
       }
@@ -308,7 +308,7 @@ let css = <:css<
 
 let process () =
   let chan = open_out "www/style.css" in
-  output_string chan (Css.to_string css);
+  output_string chan (Cow.Css.to_string css);
   close_out chan
 
 let () =

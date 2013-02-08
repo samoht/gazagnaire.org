@@ -15,7 +15,7 @@
  *)
 
 open Types
-open Html
+open Cow.Html
 
 (* People *)
 let me = make_author "T. Gazagnaire" "http://gazagnaire.org"
@@ -54,6 +54,9 @@ let hand = make_author "S. Hand" "http://www.cl.cam.ac.uk/~smh22/"
 let tim = make_author "T. Deegan" "http://www.tjd.phlegethon.org/"
 let derek = make_author "D. McAuley" "http://www.cs.nott.ac.uk/~drm/"
 let crowcroft = make_author "J. Crowcroft" "http://www.cl.cam.ac.uk/~jac22/"
+let rostos = make_author "C. Rotsos" "http://www.cl.cam.ac.uk/~cr409/"
+let balraj = make_author "B. Singh" "#"
+let smith = make_author "S. Smith" "#"
 
 let p_weis = make_author "P. Weis" "http://pauillac.inria.fr/~weis/"
 
@@ -85,12 +88,31 @@ module Publis = struct
   let causaux = "Causal Message Sequence Charts"
 
   let () =
-    save
-      2011
-      Tech
+
+    save_custom
+      2013
+      Refereed
       [loic; herve; blaise; me]
-      "Diagnosis from Scenarios, and Applications to Security"
-      "Draft";
+      "Diagnosis from Scenarios, and applications"
+      "Journal of Discrete Event Dynamic Systems"
+      [];
+
+    save_custom
+      2013
+      Refereed
+      [anil; mort; rostos; dave; balraj; me; smith; hand; crowcroft]
+      "Unikernels: Library Operating Systems for the Cloud"
+      "The 18th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2013)"
+      ["pdf", "http://anil.recoil.org/papers/2013-asplos-mirage.pdf"];
+
+    save_custom
+      2012
+      Refereed
+      [me]
+      "OPAM, a package manager for OCaml"
+      "OCaml User and Developper Workshop"
+      ["slides", "http://oud.ocaml.org/2012/slides/oud2012-paper17-slides.pdf";
+       "video" , "http://www.youtube.com/watch?v=ivLqeRZJTGs&feature=plcp" ];
 
     save
       2011
@@ -98,6 +120,14 @@ module Publis = struct
       [me; anil]
       "Dynamics for ML using Meta-Programming"
       "Electronic Notes in Theoretical Computer Science (ENTCS)";
+
+    save_custom
+      2010
+      Refereed
+      [anil; me]
+      "Mirage: ML kernels in the Cloud"
+      "ML Workshop"
+      ["slides", "http://www.slideshare.net/AnilMadhavapeddy/mirage-ml-kernels-in-the-cloud-ml-workshop-2010"];
 
     save
       2010
@@ -227,44 +257,24 @@ module Projects = struct
 
   let () =
     save
-      "mirage"
+      "OPAM"
+      <:html<
+      OPAM is a source-based package manager for OCaml. It supports multiple simultaneous
+      compiler installations, flexible package constraints, and a Git-friendly development
+      workflow.
+      >>
+      [ "website" , "http://opam.ocamlpro.com";
+        "opam.git", "http://www.github.com/OCamlPro/opam" ];
+
+    save
+      "Mirage"
       <:html<
       An open-source operating system for constructing secure,
       high-performance, reliable network applications across a
       variety of cloud computing and mobile platforms.>>
       [ "website"   , "http://www.openmirage.org";
-        "paper"     , "pub/SSGM10.pdf";
-        "mirage.git", "http://www.github.com/avsm/mirage" ];
-
-    save
-      "camloo"
-      <:html<
-      An ML-to-Scheme compiler, initially written by $html_of_author manuel$
-      and $html_of_author p_weis$ few decades ago.>>
-      [ "website"   , "http://www-sop.inria.fr/members/Thomas.Gazagnaire/";
-        "camloo.git", "http://www.github.com/samoht/camloo" ];
-
-    save
-      "HTCaML / CaSS"
-      <:html<
-      Camlp4 syntax extensions to write static HTML and CSS files directly
-      in OCaml. These tools have been used to write the page you are reading.>>
-      [ "HTCaML.git", "http://www.github.com/samoht/htcaml";
-        "CaSS.git"  , "http://www.github.com/samoht/cass"; ];
-
-    save
-      "dyntype / ORM / Shelf"
-      <:html<
-      A collection of tools using dynamic types in OCaml.
-      <em>Dyntype</em> is a Camlp4 extension adding dynamic types to OCaml.
-      <em>ORM</em> uses dynamic types to provide a complete and efficient
-        Object-Relationship Mapping to SQlite3 for OCaml.
-      <em>Shelf</em> uses dynamic types to provide a collection
-        of parsers and printers to JSON, S-expressions, HTML, ... >>
-      [ "paper"      , "pub/GM10.pdf";
-        "dyntype.git", "http://www.github.com/mirage/dyntype";
-        "ORM.git"    , "http://www.github.com/mirage/orm";
-        "Shelf.git"  , "http://www.github.com/mirage/shelf" ];
+        "paper"     , "http://anil.recoil.org/papers/2013-asplos-mirage.pdf";
+        "mirage.git", "http://www.github.com/mirage" ];
 
     save_past
       "Xen Cloud Platform"
@@ -278,8 +288,18 @@ module Projects = struct
         "xen-org.git", "http://github.com/xen-org" ];
 
     save_past
+      "camloo"
+      <:html<
+      An ML-to-Scheme compiler, initially written by $html_of_author manuel$
+      and $html_of_author p_weis$ few decades ago.>>
+      [ "website"   , "http://www-sop.inria.fr/members/Thomas.Gazagnaire/";
+        "camloo.git", "http://www.github.com/samoht/camloo" ];
+
+    save_past
       "DistriL / Scenario Doctor / ADEx"
-      <:html< A set of tools that I developped during my Ph.D thesis. >>
+      <:html<
+      A set of tools that I developped during my Ph.D thesis, to deal
+      with diagnostic and monitoring of distributed systems.>>
       [ "DistriL.tgz", "tools/DistriL.tar.gz";
         "SD.tgz"     , "tools/ScenarioDoctor.tar.gz";
         "aDEx.tgz"   , "tools/ADEx.tar.gz" ]
@@ -303,5 +323,4 @@ let github = <:html<<a href="http://www.github.com/samoht">github</a>&>>
 let ens_lyon = <:html<<a href="http://www.ens-lyon.eu">ENS Lyon</a>&>>
 let ens_cachan = <:html<<a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</a>&>>
 let ocamlpro = <:html<<a href="http://www.ocamlpro.com">OCamlPro</a>&>>
-let htcaml = <:html<<a href="http://www.github.com/samoht/htcaml">HTCaML</a>&>>
-let cass = <:html<<a href="http://www.github.com/samoht/cass">CaSS</a>&>>
+let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
