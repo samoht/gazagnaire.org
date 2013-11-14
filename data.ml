@@ -323,4 +323,7 @@ let github = <:html<<a href="http://www.github.com/samoht">github</a>&>>
 let ens_lyon = <:html<<a href="http://www.ens-lyon.eu">ENS Lyon</a>&>>
 let ens_cachan = <:html<<a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</a>&>>
 let ocamlpro = <:html<<a href="http://www.ocamlpro.com">OCamlPro</a>&>>
+let computer_lab = <:html<<a href="http://cl.cam.ac.uk">University of Cambridge</a>&>>
+let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
+let opam = <:html<<a href="http://opam.ocamlpro.com">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>

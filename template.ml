@@ -46,9 +46,12 @@ let projects = Two_columns {
 let home = Two_columns {
   left = <:html<
     <h1>Thomas Gazagnaire</h1>
-    <p>I am Chief Technical Officier at $ocamlpro$ since April 2011.
-    Previously, I have been working as postdoctoral fellow at $inria_sop$, in the $indes$ project
-    and as senior software engineer at $citrix$ on the $xenserver$ and $xcp$ softwares.
+    <p>I am a Senior Research Associate at the $computer_lab$. Before that, I was
+    Chief Technical Officier at $ocamlpro$ (where I designed and lead the implementation
+    of $opam$) and Principal Virtualisation Engineer at $onapp$.</p>
+
+    <p>I have also been working as a postdoctoral fellow at $inria_sop$, in the $indes$ project
+    and as a Senior Software Engineer at $citrix$, working on the $xenserver$ and $xcp$ softwares.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
     I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
 
@@ -73,18 +76,13 @@ let home = Two_columns {
     <h1>Contact</h1>
     <div class="image"><img src="thomas.png"/></div>
     <div class="contact">
-      <p>
-        <a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a><br/>
-        <a href="mailto:thomas@ocamlpro.com">thomas@ocamlpro.com</a></p>
+      <p><a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a></p>
      <p>
       <h2>Office</h2>
-      Société OCamlPro SAS<br/>
-      6, allée de la Croix Saint-Pierre<br/>
-      F-91190, Gif-sur-Yvette, FRANCE<br/>
-      Fax: +33 9 59 47 47 71
-      <h2>Home</h2>
-      32 rue Verdi<br/>
-      06000 Nice, FRANCE
+      FN10, Computer Laboratory, <br/>
+      University of Cambridge, <br/>
+      15 JJ Thomson Avenue, <br />
+      Cambridge CB3 0FD, UK
     </p>
    </div>
   >>;
