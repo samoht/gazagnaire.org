@@ -85,7 +85,7 @@ module Publis = struct
     save_custom y k a t w
       [ "pdf", Printf.sprintf "pub/%s.pdf" (short_name a y) ]
 
-  let causaux = "Causal Message Sequence Charts"
+  let causaux = "Causal Message Sequence Charts."
 
   let () =
 
@@ -93,16 +93,17 @@ module Publis = struct
       2013
       Refereed
       [loic; herve; blaise; me]
-      "Diagnosis from Scenarios, and applications"
-      "Journal of Discrete Event Dynamic Systems"
+      "Diagnosis from Scenarios, and applications."
+      "Journal of Discrete Event Dynamic Systems."
       [];
 
     save_custom
       2013
       Refereed
       [anil; mort; rostos; dave; balraj; me; smith; hand; crowcroft]
-      "Unikernels: Library Operating Systems for the Cloud"
-      "The 18th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2013)"
+      "Unikernels: Library Operating Systems for the Cloud."
+      "The 18th International Conference on Architectural Support for Programming Languages \
+       and Operating Systems (ASPLOS 2013)."
       ["pdf", "http://anil.recoil.org/papers/2013-asplos-mirage.pdf"];
 
     save_custom
@@ -110,7 +111,7 @@ module Publis = struct
       Refereed
       [me]
       "OPAM, a package manager for OCaml"
-      "OCaml User and Developper Workshop"
+      "OCaml User and Developper Workshop."
       ["slides", "http://oud.ocaml.org/2012/slides/oud2012-paper17-slides.pdf";
        "video" , "http://www.youtube.com/watch?v=ivLqeRZJTGs&feature=plcp" ];
 
@@ -118,80 +119,85 @@ module Publis = struct
       2011
       Refereed
       [me; anil]
-      "Dynamics for ML using Meta-Programming"
-      "Electronic Notes in Theoretical Computer Science (ENTCS)";
+      "Dynamics for ML using Meta-Programming."
+      "Electronic Notes in Theoretical Computer Science (ENTCS).";
 
     save_custom
       2010
       Refereed
       [anil; me]
-      "Mirage: ML kernels in the Cloud"
-      "ML Workshop"
-      ["slides", "http://www.slideshare.net/AnilMadhavapeddy/mirage-ml-kernels-in-the-cloud-ml-workshop-2010"];
+      "Mirage: ML kernels in the Cloud."
+      "ML Workshop."
+      ["slides", "http://www.slideshare.net/AnilMadhavapeddy/mirage-ml-kernels-in-the-\
+                  cloud-ml-workshop-2010"];
 
     save
       2010
       Refereed
       [dave; richard; me; anil]
-      "Using Functional Programming within an Industrial Product Group: Perspectives and Perceptions"
-      "The 15th ACM SIGPLAN International Conference on Functional Programming";
+      "Using Functional Programming within an Industrial Product Group: Perspectives \
+       and Perceptions."
+      "The 15th ACM SIGPLAN International Conference on Functional Programming.";
 
     save
       2010
       Refereed
       [anil; mort; rip; me; hand; tim; derek; crowcroft]
-      "Turning down the LAMP: Software Specialisation for the Cloud"
-      "The 2nd USENIX Workshop on Hot Topics in Cloud Computing";
+      "Turning down the LAMP: Software Specialisation for the Cloud."
+      "The 2nd USENIX Workshop on Hot Topics in Cloud Computing.";
 
     save
       2010
       Refereed
       [me; anil]
-      "Statically-typed value persistence for ML"
-      "The 1st Workshop on Generative Technologies";
+      "Statically-typed value persistence for ML."
+      "The 1st Workshop on Generative Technologies.";
 
     save
       2009
       Refereed
       [me; vincent]
-      "OXenstored: an efficient hierarchical and transactional database using functional programming with reference cell comparisons"
-      "The 14th ACM SIGPLAN International Conference on Functional Programming";
+      "OXenstored: an efficient hierarchical and transactional database using functional \
+       programming with reference cell comparisons."
+      "The 14th ACM SIGPLAN International Conference on Functional Programming.";
 
     save
       2009
       Refereed
       [me; blaise; loic; thiagu; shaofa]
       causaux
-      "Theoretical Computer Science, Volume 410, Number 41";
+      "Theoretical Computer Science, Volume 410, Number 41.";
 
     save_custom
       2008
       Tech
       [me]
-      "Projection of Rational Pomset Expression"
-      "Draft"
+      "Projection of Rational Pomset Expression."
+      "Draft."
       ["pdf", "Gazagnaire08-draft.pdf"];
 
     save
       2008
       Refereed
       [shaofa; loic; me]
-      "Logic-based Diagnosis for Distributed Systems"
-      "'Perspectives in Concurrency -- Feststichrift for P.S. Thiagarajan'. World Scientific";
+      "Logic-based Diagnosis for Distributed Systems."
+      "'Perspectives in Concurrency -- Feststichrift for P.S. Thiagarajan'. World Scientific.";
 
     save
       2008
       Refereed
       [deb; me; blaise]
-      "Small Logs for Transactional Services: Distinction is much more accurate than (Positive) Discrimination"
-      "The 11th IEEE High Assurance Systems Engineering Symposium";
+      "Small Logs for Transactional Services: Distinction is much more accurate than \
+       (Positive) Discrimination."
+      "The 11th IEEE High Assurance Systems Engineering Symposium.";
 
     save_custom
       2008
       Tech
       [me]
-      "Langages de Scénarios: Utiliser des Ordres Partiels pour Modéliser, Vérifier et Superviser des Systèmes Parallèles et Répartis"
-      "Ph.D. Thesis, University of Rennes 1"
+      "Langages de Scénarios: Utiliser des Ordres Partiels pour Modéliser, Vérifier et \
+       Superviser des Systèmes Parallèles et Répartis."
+      "Ph.D. Thesis, University of Rennes 1."
       ["pdf"   , "pub/gazagnaire-phd.pdf";
        "slides", "pub/gazagnaire-phd-slides.pdf";
        "book" , "http://www.amazon.fr/Langages-Scnarios-Thomas-Gazagnaire/dp/6131513082"];
@@ -201,43 +207,44 @@ module Publis = struct
       Refereed
       [me; blaise; loic; thiagu; shaofa]
       causaux
-      "The 18th International Conference on Concurrency Theory";
+      "The 18th International Conference on Concurrency Theory.";
 
     save
       2007
       Refereed
       [me; loic]
-      "Reconstructing Causal Ordering with boxed pomsets"
-      "The 27th IFIP WG 6.1 International Conference on Formal Methods for Networked and Distributed Systems";
+      "Reconstructing Causal Ordering with boxed pomsets."
+      "The 27th IFIP WG 6.1 International Conference on Formal Methods for Networked \
+       and Distributed Systems.";
 
     save
       2007
       Refereed
       [me; claude]
       "Abstraire à la Volée les Evénements d'un Système Réparti"
-      "La 7 ème Conférence Internationale sur les NOuvelles TEchnologies de la REpartition";
+      "La 7 ème Conférence Internationale sur les NOuvelles TEchnologies de la REpartition.";
 
     save_custom
       2007
       Tech
       [me; shaofa; loic; blaise; thiagu]
       causaux
-      "Research Report RR-6301"
+      "Research Report RR-6301."
       ["pdf", "pub/RR-6301.pdf"];
 
     save
       2006
       Refereed
       [loic; me; blaise]
-      "Diagnosis from Scenarios"
-      "The 8th International Workshop on Discrete Event Systems";
+      "Diagnosis from Scenarios."
+      "The 8th International Workshop on Discrete Event Systems.";
 
     save_custom
       2005
       Tech
       [me; loic; claude]
-      "Online Abstraction of Distributed Executions"
-      "Research Report RR-5736"
+      "Online Abstraction of Distributed Executions."
+      "Research Report RR-5736."
       ["pdf", "pub/RR-5736.pdf"];
 
 end
@@ -319,7 +326,7 @@ let citrix = <:html<<a href="http://www.citrix.com">Citrix</a>&>>
 let xenserver = <:html<<a href="http://www.citrix.com/xenserver">XenServer</a>&>>
 let xcp = <:html<<a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</a>&>>
 let ocaml = <:html<<a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</a>&>>
-let github = <:html<<a href="http://www.github.com/samoht">github</a>&>>
+let github = <:html<<a href="http://www.github.com/samoht">Github</a>&>>
 let ens_lyon = <:html<<a href="http://www.ens-lyon.eu">ENS Lyon</a>&>>
 let ens_cachan = <:html<<a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</a>&>>
 let ocamlpro = <:html<<a href="http://www.ocamlpro.com">OCamlPro</a>&>>
@@ -327,3 +334,4 @@ let computer_lab = <:html<<a href="http://cl.cam.ac.uk">University of Cambridge<
 let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
 let opam = <:html<<a href="http://opam.ocamlpro.com">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
+let mirage = <:html<<a href="http://www.openmirage.org">Mirage</a>&>>

@@ -36,7 +36,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 }
 .body {
 	background-color: white;
-	color: #7F7B7B;
+	color: black;
 	font-size: 0.9em;
 	text-align: justify;
 	width: 100%;
@@ -51,15 +51,15 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .body a {
-	color: #7F7B7B;
+	color: #42A2D2;
 	text-decoration: none;
-	border-bottom: 1px dashed #7F7B7B;
+	border-bottom: 0px;
 
 }
 .body a:hover {
-	color: #7F7B7B;
+	color: grey;
 	text-decoration: none;
-	border-bottom: 1px solid #7F7B7B;
+	border-bottom: 0px;
 
 }
 .body h1 {
@@ -79,7 +79,6 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 	padding-left: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	border-bottom: 1px dashed #7F7B7B;
 
 }
 .body .image img {
@@ -99,7 +98,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .header {
-	color: #888;
+	color: grey;
 	background-color: #363842;
 	font-size: 0.9em;
 	line-height: 2em;
@@ -107,7 +106,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .header .nav {
-	color: #888;
+	color: grey;
 	background-color: #363842;
 	font-size: 0.9em;
 	line-height: 2em;
@@ -121,14 +120,18 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .header .nav a {
-	color: #888;
+	color: grey;
 	text-decoration: none;
 
 }
 .header .nav a:hover {
-	color: #888;
+	color: grey;
 	text-decoration: none;
-	border-bottom: 1px solid #888;
+
+}
+.header .nav #current a {
+	color: black;
+	text-decoration: none;
 
 }
 .header .nav #current {
@@ -152,15 +155,15 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .footer a {
-	color: #888;
+	color: #42A2D2;
 	text-decoration: none;
-	border-bottom: 1px dashed #888;
+	border-bottom: 0px;
 
 }
 .footer a:hover {
-	color: #888;
+	color: grey;
 	text-decoration: none;
-	border-bottom: 1px solid #888;
+	border-bottom: 0px;
 
 }
 .author {
@@ -169,26 +172,32 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .publication .author a {
-	color: #7F7B7B;
+	color: black;
 	text-decoration: none;
-	border-bottom: 1px dashed #7F7B7B;
+	border-bottom: 0px;
 
 }
 .publication .author a:hover {
-	color: #7F7B7B;
+	color: grey;
 	text-decoration: none;
-	border-bottom: 1px solid #7F7B7B;
+	border-bottom: 0px;
+
+}
+.publication .files a {
+	color: black;
+	text-decoration: none;
+	border-bottom: 0px;
+
+}
+.publication .files a:hover {
+	color: grey;
+	text-decoration: none;
+	border-bottom: 0px;
 
 }
 .publication {
-	margin: 1em;
+	margin: 0em;
 	padding: 0.5em;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	-webkit-border-radius: .5em;
-	-moz-border-radius: .5em;
-	border-radius: .5em;
 
 }
 .kind1 .publication {
@@ -200,7 +209,8 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .publication .title {
-	color: #42A2D2;
+	color: black;
+	font-weight: bold;
 
 }
 .publication .where {
@@ -219,27 +229,22 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, 
 
 }
 .publication .files {
-	margin-right: 4px;
-	text-align: center;
+	margin-left: 10px;
+	margin-top: 2px;
+	text-align: left;
 
 }
 .project {
 	margin: 2em;
 	padding: 0.5em;
 	background-color: whiteSmoke;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-	-webkit-border-radius: .5em;
-	-moz-border-radius: .5em;
-	border-radius: .5em;
 
 }
 .project .name {
 	padding-right: 10px;
 	font-weight: bold;
-	text-align: right;
-	color: #42A2D2;
+	text-align: center;
+	color: black;
 
 }
 .project .description {

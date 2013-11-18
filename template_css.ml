@@ -14,21 +14,22 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-let color1 = <:css< #42A2D2 >>
-let color2 = <:css< whiteSmoke >>
+let blue  = <:css< #42A2D2 >>
+let gray  = <:css< whiteSmoke >>
+let black = <:css< black >>
 
-let dashed_links name color =
+let links name color =
   <:css<
       $name$ a {
         color: $color$;
         text-decoration: none;
-        border-bottom: 1px dashed $color$;
+        border-bottom: 0px;
       }
 
       $name$ a:hover {
-        color: $color$;
+        color: grey;
         text-decoration: none;
-        border-bottom: 1px solid $color$;
+        border-bottom: 0px;
       }
   >>
 
@@ -39,7 +40,7 @@ module Body = struct
 
   let fonts = <:css<
     background-color: $bg_color$;
-    color: $fg_color$;
+    color: black;
     font-size: 0.9em;
     text-align: justify;
     >>
@@ -98,10 +99,10 @@ module Body = struct
       margin-left: 4em;
     }
 
-    $dashed_links <:css< .body >> fg_color$;
+    $links <:css< .body >> blue$;
 
     .body h1 {
-      background-color: $color1$;
+      background-color: $blue$;
       color: $bg_color$;
       margin: 0.5em 0px 1em;
       padding: 0.3em;
@@ -115,7 +116,6 @@ module Body = struct
       padding-left: 1em;
       margin-top: 1em;
       margin-bottom: 1em;
-      border-bottom: 1px dashed $fg_color$;
     }
 
     .body .image img {
@@ -145,7 +145,7 @@ module Header = struct
   let nav = <:css< .header .nav >>
 
   let fonts = <:css<
-    color: $fg_color$;
+    color: grey;
     background-color: $bg_color$;
     font-size: 0.9em;
     line-height: 2em;
@@ -164,14 +164,18 @@ module Header = struct
     }
 
     $nav$ a {
-      color: $fg_color$;
+      color: grey;
       text-decoration: none;
     }
 
     $nav$ a:hover {
-      color: $fg_color$;
+      color: grey;
       text-decoration: none;
-      border-bottom: 1px solid $fg_color$;
+    }
+
+    $nav$ #current a {
+      color: black;
+      text-decoration: none;
     }
 
     $nav$ #current {
@@ -211,7 +215,7 @@ module Footer = struct
       padding-top: 0.5em;
       padding-bottom: 40px;
     }
-    $dashed_links <:css< .footer >> fg_color$
+    $links <:css< .footer >> blue$;
     >>
 end
 
@@ -223,17 +227,16 @@ module Publication = struct
         font-style: italic;
       }
 
-      $dashed_links <:css< .publication .author >> Body.fg_color$;
+      $links <:css< .publication .author >> black$;
+      $links <:css< .publication .files >> black$;
 
       .publication {
-        margin: 1em;
+        margin: 0em;
         padding: 0.5em;
-        $Css.box_shadow$;
-        $Css.rounded$;
       }
 
       .kind1 .publication {
-        background-color: $color2$;
+        background-color: $gray$;
       }
 
       .kind2 .publication {
@@ -241,7 +244,8 @@ module Publication = struct
       }
 
       .publication .title {
-        color: $color1$;
+        color: black;
+        font-weight: bold;
       }
 
       .publication .where {
@@ -258,8 +262,9 @@ module Publication = struct
       }
 
       .publication .files {
-        margin-right: 4px;
-        text-align: center;
+        margin-left: 10px;
+        margin-top: 2px;
+        text-align: left;
       }
     >>
 end
@@ -270,16 +275,14 @@ module Project = struct
       .project {
         margin: 2em;
         padding: 0.5em;
-        background-color: $color2$;
-        $Css.box_shadow$;
-        $Css.rounded$;
+        background-color: $gray$;
       }
 
       .project .name {
         padding-right: 10px;
         font-weight: bold;
-        text-align: right;
-        color: $color1$;
+        text-align: center;
+        color: black;
       }
 
       .project .description {

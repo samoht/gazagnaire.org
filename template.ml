@@ -50,8 +50,8 @@ let home = Two_columns {
     Chief Technical Officier at $ocamlpro$ (where I designed and lead the implementation
     of $opam$) and Principal Virtualisation Engineer at $onapp$.</p>
 
-    <p>I have also been working as a postdoctoral fellow at $inria_sop$, in the $indes$ project
-    and as a Senior Software Engineer at $citrix$, working on the $xenserver$ and $xcp$ softwares.
+    <p>I was also a postdoctoral fellow at $inria_sop$, in the $indes$ project
+    and a Senior Software Engineer at $citrix$, working on the $xenserver$.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
     I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
 
@@ -71,12 +71,22 @@ let home = Two_columns {
     <br/>
     <p>I am doing most of my software developments in $ocaml$. My projects
     are hosted on $github$.</p>
-  >>;
+    <h2>Open Positions</h2>
+    <p>I am looking for students interested to work on any project related to
+       $mirage$. Ideal profiles: master in CS, with a taste of formal methods
+       and a strong interest in Functional Programming and/or Operating System.
+       Please send a resume (CV) and a motivation letter.</p>
+       <ul>
+       <li><a href="pub/m2.pdf">Weak Models of data consistency</a></li>
+       <li>Large-scale monitoring of distributed applications</li>
+       </ul>
+   >>;
   right = <:html<
     <h1>Contact</h1>
     <div class="image"><img src="thomas.png"/></div>
     <div class="contact">
       <p><a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a></p>
+      <p><a href="mailto:thomas.gazagnaire@cl.cam.ac.uk">thomas.gazagnaire@cl.cam.ac.uk</a></p>
      <p>
       <h2>Office</h2>
       FN10, Computer Laboratory, <br/>
