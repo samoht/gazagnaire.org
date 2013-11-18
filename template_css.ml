@@ -215,7 +215,7 @@ module Footer = struct
       padding-top: 0.5em;
       padding-bottom: 40px;
     }
-    $links <:css< .footer >> blue$;
+    $links <:css< .footer >> <:css< white >>$;
     >>
 end
 
