@@ -271,7 +271,7 @@ module Projects = struct
       workflow.
       >>
       [ "website" , "http://opam.ocamlpro.com";
-        "opam.git", "http://www.github.com/OCamlPro/opam" ];
+        "opam.git", "http://www.github.com/ocaml/opam" ];
 
     save
       "Mirage"
@@ -284,15 +284,16 @@ module Projects = struct
         "mirage.git", "http://www.github.com/mirage" ];
 
     save_past
-      "Xen Cloud Platform"
+      "Xen API"
       <:html<
-      Xen Cloud Platform offers ISVs and service providers a complete
-      cloud infrastructure platform with a powerful management stack
-      based on open, standards-based APIs, support for mutli-tenancy,
-      SLA guarantees and deteailed metrics for consumption based charging.
+        Xen API (or xapi) is a management stack that configures and
+        controls Xen-enabled hosts and resource pools, and co-ordinates
+        resources within the pool. Xapi exposes the Xen API interface
+        for many languages and is a component of Citrix XenServer.
+        Xen API is written mostly in <a href="http://ocaml.org">OCaml</a>.
       >>
-      [ "website"    , "http://www.xen.org/products/cloudxen.html";
-        "xen-org.git", "http://github.com/xen-org" ];
+      [ "website"    , "http://xenproject.org/developers/teams/xapi.html";
+        "xen-org.git", "http://github.com/xapi-project" ];
 
     save_past
       "camloo"
@@ -318,20 +319,19 @@ let current_projects = List.rev !Projects.current
 let past_projects = List.rev !Projects.past
 
 let dblp = <:html<<a href ="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</a>&>>
-let inria_sop = <:html<<a href="http://www-sop.inria.fr">INRIA sophia-antipolis</a>&>>
+let inria_sop = <:html<<a href="http://www-sop.inria.fr/">INRIA sophia-antipolis</a>&>>
 let indes = <:html<<a href="http://www-sop.inria.fr/indes/">INDES</a>&>>
 let irisa = <:html<<a href="http://www.irisa.fr/">IRISA</a>&>>
 let distribcom = <:html<<a href="http://www.irisa.fr/distribcom/">DistribCom</a>&>>
-let citrix = <:html<<a href="http://www.citrix.com">Citrix</a>&>>
+let citrix = <:html<<a href="http://www.citrix.com/">Citrix</a>&>>
 let xenserver = <:html<<a href="http://www.citrix.com/xenserver">XenServer</a>&>>
-let xcp = <:html<<a href="http://www.xen.org/products/cloudxen.html">Xen Cloud Platform</a>&>>
-let ocaml = <:html<<a href="http://caml.inria.fr/ocaml/index.en.html">OCaml</a>&>>
-let github = <:html<<a href="http://www.github.com/samoht">Github</a>&>>
-let ens_lyon = <:html<<a href="http://www.ens-lyon.eu">ENS Lyon</a>&>>
-let ens_cachan = <:html<<a href="http://www.bretagne.ens-cachan.fr">ENS Cachan-Bretagne</a>&>>
-let ocamlpro = <:html<<a href="http://www.ocamlpro.com">OCamlPro</a>&>>
+let ocaml = <:html<<a href="http://ocaml.org/">OCaml</a>&>>
+let github = <:html<<a href="http://www.github.com/samoht/">Github</a>&>>
+let ens_lyon = <:html<<a href="http://www.ens-lyon.eu/">ENS Lyon</a>&>>
+let ens_cachan = <:html<<a href="http://www.ens-rennes.fr">ENS Rennes</a>&>>
+let ocamlpro = <:html<<a href="http://www.ocamlpro.com/">OCamlPro</a>&>>
 let computer_lab = <:html<<a href="http://cl.cam.ac.uk">University of Cambridge</a>&>>
 let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
-let opam = <:html<<a href="http://opam.ocamlpro.com">OPAM</a>&>>
+let opam = <:html<<a href="http://opam.ocamlpro.com/">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
-let mirage = <:html<<a href="http://www.openmirage.org">Mirage</a>&>>
+let mirage = <:html<<a href="http://www.openmirage.org/">Mirage</a>&>>
