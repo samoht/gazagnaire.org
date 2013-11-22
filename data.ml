@@ -292,8 +292,8 @@ module Projects = struct
         for many languages and is a component of Citrix XenServer.
         Xen API is written mostly in <a href="http://ocaml.org">OCaml</a>.
       >>
-      [ "website"    , "http://xenproject.org/developers/teams/xapi.html";
-        "xen-org.git", "http://github.com/xapi-project" ];
+      [ "website"         , "http://xenproject.org/developers/teams/xapi.html";
+        "xapi-project.git", "http://github.com/xapi-project" ];
 
     save_past
       "camloo"
