@@ -46,7 +46,9 @@ let projects = Two_columns {
 let home = Two_columns {
   left = <:html<
     <h1>Thomas Gazagnaire</h1>
-    <p>I am a Senior Research Associate at the $computer_lab$. Before that, I was
+    <p>I am a Senior Research Associate at the $computer_lab$ where I work on distributed
+    systems and functional programming on the the $nymote$ project (with more focus on $mirage$
+    and $irminsule$). Before that, I was
     Chief Technical Officier at $ocamlpro$ (where I designed and lead the implementation
     of $opam$) and Principal Virtualisation Engineer at $onapp$.</p>
 
