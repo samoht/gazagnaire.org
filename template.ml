@@ -47,13 +47,14 @@ let home = Two_columns {
   left = <:html<
     <h1>Thomas Gazagnaire</h1>
     <p>I am a Senior Research Associate at the $computer_lab$ where I work on distributed
-    systems and functional programming on the the $nymote$ project (with more focus on $mirage$
-    and $irminsule$). Before that, I was
+    systems and functional programming on the the $nymote$ project -- with more focus on
+    the $mirage$ library operating system and the $irminsule$ distributed store.
+    Before that, I was
     Chief Technical Officier at $ocamlpro$ (where I designed and lead the implementation
     of $opam$) and Principal Virtualisation Engineer at $onapp$.</p>
 
     <p>I was also a postdoctoral fellow at $inria_sop$, in the $indes$ project
-    and a Senior Software Engineer at $citrix$, working on the $xenserver$.
+    and a Senior Software Engineer at $citrix$, working on $xenserver$.
     I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
     I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
 
