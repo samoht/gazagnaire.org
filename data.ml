@@ -335,5 +335,4 @@ let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
 let opam = <:html<<a href="http://opam.ocamlpro.com/">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
 let mirage = <:html<<a href="http://www.openmirage.org/">Mirage</a>&>>
-let nymote = <:html<<a href="http://nymote.org/">Nymote</a>&>>
-let irminsule = <:html<<a href="https://github.com/samoht/irminsule">Irminsule</a>&>>
+let irmin = <:html<<a href="https://github.com/mirage/irmin">Irmin</a>&>>
