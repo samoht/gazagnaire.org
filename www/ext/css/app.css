@@ -1,4 +1,4 @@
-.publication .author {
+.author {
 display: inline;
 font-style: italic;
 }
@@ -33,6 +33,10 @@ display: inline;
 .publication {
 padding: 0.4em;
 }
+.publication .authors,
+.publication .title {
+padding-right: 0.4em;
+}
 
 * {
 margin: 0;
@@ -51,5 +55,6 @@ margin: 0 auto -4em;
 
 .footer, .push {
 height: 4em;
+margin-top: 2em;
 font-size: 0.8em;
 }

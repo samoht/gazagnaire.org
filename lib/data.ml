@@ -341,25 +341,41 @@ module Projects = struct
     past := { name = n; description = d; links = List.map map_link l } :: !past
 
   let () =
+
+    save
+      "Mirage"
+      <:html<
+         Mirage OS is a library operating system that constructs unikernels for
+         secure, high-performance network applications across a variety of cloud
+         computing and mobile platforms. Code can be developed on a normal OS
+         such as Linux or MacOS X, and then compiled into a fully-standalone,
+         specialised unikernel that runs under the Xen hypervisor. >>
+      [ "website"   , "http://www.openmirage.org";
+        "paper"     , "http://anil.recoil.org/papers/2013-asplos-mirage.pdf";
+        "mirage.git", "http://www.github.com/mirage" ];
+
+    save
+      "Irmin"
+      <:html<
+        Irmin is a library database that takes the principles behind tools like
+        Git and applies them to the wider problem of storing and syncing our
+        data. This allows the possibility for all software using the Irmin layer
+        to remain in sync as changes can be pushed directly from one location to
+        another. It also allows the possibility of reverting to previous
+        versions of any content as all history is also preserved.
+      >>
+      [ "intro"    , "http://openmirage.org/blog/introducing-irmin";
+        "irmin.git", "http://www.github.com/mirage" ];
+
     save
       "OPAM"
       <:html<
       OPAM is a source-based package manager for OCaml. It supports multiple simultaneous
       compiler installations, flexible package constraints, and a Git-friendly development
-      workflow.
+      workflow. It is the default package manager when using OCaml.
       >>
-      [ "website" , "http://opam.ocamlpro.com";
+      [ "website" , "http://opam.ocaml.org";
         "opam.git", "http://www.github.com/ocaml/opam" ];
-
-    save
-      "Mirage"
-      <:html<
-      An open-source operating system for constructing secure,
-      high-performance, reliable network applications across a
-      variety of cloud computing and mobile platforms.>>
-      [ "website"   , "http://www.openmirage.org";
-        "paper"     , "http://anil.recoil.org/papers/2013-asplos-mirage.pdf";
-        "mirage.git", "http://www.github.com/mirage" ];
 
     save_past
       "Xen API"

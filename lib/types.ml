@@ -64,21 +64,14 @@ type project = {
   name: string;
   description: Cow.Html.t;
   links: Cow.Html.link list;
-} with html
+}
 
-type body =
-  | One_column of Cow.Html.t
-  | Two_columns of Cow.Html.t * Cow.Html.t
-
-let html_of_body = function
-  | One_column c ->
-    <:html<
-<div class="row">
-  <div class="large-12 small-centered columns">$c$</div>
-</div>&>>
-  | Two_columns (l, r) ->
-    <:html<
-<div class="row">
-  <div class="large-6 columns">$l$</div>
-  <div class="large-6 columns">$r$</div>
-</div>&>>
+let html_of_project t =
+  <:html<
+    <div class="project">
+      <h3>$str:t.name$</h3>
+      <blockquote>$t.description$
+      $list:List.map Cow.Html.html_of_link t.links$
+      </blockquote>
+    </div>
+  >>

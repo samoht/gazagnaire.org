@@ -26,41 +26,91 @@
 </div>
   </div>
     <div class="body">
-<div class="row">
-  <div class="large-6 columns">
-    <h1>Current projects</h1>
-    <div class="project"><div class="name">OPAM</div><div class="description">
+    <div class="row">
+    <h2>Current Projects</h2>
+    
+    <div class="project">
+      <h3>Mirage</h3>
+      <blockquote>
+         Mirage OS is a library operating system that constructs unikernels for
+         secure, high-performance network applications across a variety of cloud
+         computing and mobile platforms. Code can be developed on a normal OS
+         such as Linux or MacOS X, and then compiled into a fully-standalone,
+         specialised unikernel that runs under the Xen hypervisor. 
+      <a href="http://www.openmirage.org">[website]</a><a href="http://anil.recoil.org/papers/2013-asplos-mirage.pdf">[paper]</a><a href="http://www.github.com/mirage">[mirage.git]</a>
+      </blockquote>
+    </div>
+  
+    <div class="project">
+      <h3>Irmin</h3>
+      <blockquote>
+        Irmin is a library database that takes the principles behind tools like
+        Git and applies them to the wider problem of storing and syncing our
+        data. This allows the possibility for all software using the Irmin layer
+        to remain in sync as changes can be pushed directly from one location to
+        another. It also allows the possibility of reverting to previous
+        versions of any content as all history is also preserved.
+      
+      <a href="http://openmirage.org/blog/introducing-irmin">[intro]</a><a href="http://www.github.com/mirage">[irmin.git]</a>
+      </blockquote>
+    </div>
+  
+    <div class="project">
+      <h3>OPAM</h3>
+      <blockquote>
       OPAM is a source-based package manager for OCaml. It supports multiple simultaneous
       compiler installations, flexible package constraints, and a Git-friendly development
-      workflow.
-      </div><div class="links"><a href="http://www.github.com/ocaml/opam">[opam.git]</a><a href="http://opam.ocamlpro.com">[website]</a></div></div><div class="project"><div class="name">Mirage</div><div class="description">
-      An open-source operating system for constructing secure,
-      high-performance, reliable network applications across a
-      variety of cloud computing and mobile platforms.</div><div class="links"><a href="http://www.github.com/mirage">[mirage.git]</a><a href="http://anil.recoil.org/papers/2013-asplos-mirage.pdf">[paper]</a><a href="http://www.openmirage.org">[website]</a></div></div> </div>
-  <div class="large-6 columns">
-    <h1>Past projects</h1>
-    <div class="project"><div class="name">Xen API</div><div class="description">
+      workflow. It is the default package manager when using OCaml.
+      
+      <a href="http://opam.ocaml.org">[website]</a><a href="http://www.github.com/ocaml/opam">[opam.git]</a>
+      </blockquote>
+    </div>
+  
+
+    <h2>Past Projects</h2>
+    
+    <div class="project">
+      <h3>Xen API</h3>
+      <blockquote>
         Xen API (or xapi) is a management stack that configures and
         controls Xen-enabled hosts and resource pools, and co-ordinates
         resources within the pool. Xapi exposes the Xen API interface
         for many languages and is a component of Citrix XenServer.
         Xen API is written mostly in <a href="http://ocaml.org">OCaml</a>.
-      </div><div class="links"><a href="http://github.com/xapi-project">[xapi-project.git]</a><a href="http://xenproject.org/developers/teams/xapi.html">[website]</a></div></div><div class="project"><div class="name">camloo</div><div class="description">
+      
+      <a href="http://xenproject.org/developers/teams/xapi.html">[website]</a><a href="http://github.com/xapi-project">[xapi-project.git]</a>
+      </blockquote>
+    </div>
+  
+    <div class="project">
+      <h3>camloo</h3>
+      <blockquote>
       An ML-to-Scheme compiler, initially written by <div class="author"><a href="http://www-sop.inria.fr/members/Manuel.Serrano/">M. Serrano</a></div>
-      and <div class="author"><a href="http://pauillac.inria.fr/~weis/">P. Weis</a></div> few decades ago.</div><div class="links"><a href="http://www.github.com/samoht/camloo">[camloo.git]</a><a href="http://www-sop.inria.fr/members/Thomas.Gazagnaire/">[website]</a></div></div><div class="project"><div class="name">DistriL / Scenario Doctor / ADEx</div><div class="description">
+      and <div class="author"><a href="http://pauillac.inria.fr/~weis/">P. Weis</a></div> few decades ago.
+      <a href="http://www-sop.inria.fr/members/Thomas.Gazagnaire/">[website]</a><a href="http://www.github.com/samoht/camloo">[camloo.git]</a>
+      </blockquote>
+    </div>
+  
+    <div class="project">
+      <h3>DistriL / Scenario Doctor / ADEx</h3>
+      <blockquote>
       A set of tools that I developped during my Ph.D thesis, to deal
-      with diagnostic and monitoring of distributed systems.</div><div class="links"><a href="tools/ADEx.tar.gz">[aDEx.tgz]</a><a href="tools/ScenarioDoctor.tar.gz">[SD.tgz]</a><a href="tools/DistriL.tar.gz">[DistriL.tgz]</a></div></div> </div>
-</div></div>
+      with diagnostic and monitoring of distributed systems.
+      <a href="tools/DistriL.tar.gz">[DistriL.tgz]</a><a href="tools/ScenarioDoctor.tar.gz">[SD.tgz]</a><a href="tools/ADEx.tar.gz">[aDEx.tgz]</a>
+      </blockquote>
+    </div>
+  
+    </div>
+  </div>
     <div class="push"> </div>
   </div>
   <div class="footer">
-<div class="row">
-  <div class="large-12 small-centered columns">
+      <div class="row">
       © 2010-2014 Thomas Gazagnaire ::
       Last modified : 10/9/2014 ::
       Generated by <a href="http://www.github.com/mirage/ocaml-cow">CoW</a>.
+      </div>
     </div>
-</div></div>
 
   <script src="ext/js/vendor/jquery.js"/>
   <script src="ext/js/foundation.min.js"/>
