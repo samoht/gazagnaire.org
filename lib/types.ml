@@ -33,8 +33,8 @@ type publication = {
   title: string;
   authors: authors;
   where: string;
-  year: int;
   files: Cow.Html.link list;
+  year: int;
 } with html
 
 type refereed = publication with html
@@ -66,14 +66,19 @@ type project = {
   links: Cow.Html.link list;
 } with html
 
-type two_columns = {
-  left: Cow.Html.t;
-  right: Cow.Html.t;
-} with html
-
-type one_column = Cow.Html.t with html
-
 type body =
-  | One_column of one_column
-  | Two_columns of two_columns
-with html
+  | One_column of Cow.Html.t
+  | Two_columns of Cow.Html.t * Cow.Html.t
+
+let html_of_body = function
+  | One_column c ->
+    <:html<
+<div class="row">
+  <div class="large-12 small-centered columns">$c$</div>
+</div>&>>
+  | Two_columns (l, r) ->
+    <:html<
+<div class="row">
+  <div class="large-6 columns">$l$</div>
+  <div class="large-6 columns">$r$</div>
+</div>&>>

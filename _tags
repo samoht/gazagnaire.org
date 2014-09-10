@@ -1,1 +1,0 @@
-true: syntax(camlp4o), package(cow.syntax), package(cow), package(unix)

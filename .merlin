@@ -1,0 +1,3 @@
+PKG cow
+B _build/**
+S lib/

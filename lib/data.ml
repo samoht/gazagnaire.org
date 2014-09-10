@@ -57,8 +57,22 @@ let crowcroft = make_author "J. Crowcroft" "http://www.cl.cam.ac.uk/~jac22/"
 let rostos = make_author "C. Rotsos" "http://www.cl.cam.ac.uk/~cr409/"
 let balraj = make_author "B. Singh" "#"
 let smith = make_author "S. Smith" "#"
+let amir = make_author "A. Chaudhry" "http://amirchaudhry.com/"
+let dimino = make_author "J. Dimino" "https://github.com/diml"
 
 let p_weis = make_author "P. Weis" "http://pauillac.inria.fr/~weis/"
+
+let cagdas = make_author "Ç. Bozman" "http://cagdas.bozman.fr"
+let fabrice = make_author "F. Le Fessant" "http://fabrice.lefessant.net/"
+let michel = make_author "M. Mauny" "http://www.mauny.net/index.en.php"
+let louis = make_author "L. Gesbert" "http://louis.gesbert.fr/cv.en.html"
+let leonard = make_author "T. Leonard" "http://roscidus.com/blog/"
+let sheets = make_author "D. Sheets" "https://github.com/dsheets"
+let shinwell = make_author "M. Shinwell" "http://www.three-tuns.net/mark"
+let leo = make_author "L. White" "https://github.com/lpw25"
+let jeremy = make_author "J. Yallop" "https://github.com/yallop"
+let gregory = make_author "G. Tsipenyuk" "#"
+let wang = make_author "P. Wang" "http://philippewang.info/"
 
 let map_link (t,l) =  { text="["^t^"]"; href=l }
 
@@ -90,6 +104,30 @@ module Publis = struct
   let () =
 
     save_custom
+      2014
+      Refereed
+      [anil; me; dave; mort]
+      "Metaprogramming with ML modules in the MirageOS."
+      "ML Family Workshop."
+      ["pdf", "https://sites.google.com/site/mlworkshoppe/Gazagnaire-abstract.pdf"];
+
+    save_custom
+      2014
+      Refereed
+      [anil; amir; dimino; me; louis; leonard; sheets; shinwell; leo; jeremy]
+      "The OCaml Platform v1.0."
+      "The OCaml User and Developper Workshop."
+      ["pdf", "https://ocaml.org/meetings/ocaml/2014/ocaml2014_7.pdf"];
+
+    save_custom
+      2014
+      Refereed
+      [me; amir; anil; mort; dave; sheets; gregory; crowcroft]
+      "Irmin: a branch-consistent distributed library database."
+      "The OCaml User and Developper Workshop."
+      ["pdf", "https://ocaml.org/meetings/ocaml/2014/ocaml2014_11.pdf"];
+
+    save_custom
       2013
       Refereed
       [loic; herve; blaise; me]
@@ -107,13 +145,53 @@ module Publis = struct
       ["pdf", "http://anil.recoil.org/papers/2013-asplos-mirage.pdf"];
 
     save_custom
+      2013
+      Refereed
+      [anil; amir; me; sheets; wang; leo; jeremy]
+      "The OCaml Platform v0.1."
+      "The OCaml User and Developper Workshop."
+      ["pdf", "http://ocaml.org/meetings/ocaml/2013/proposals/platform.pdf"];
+
+    save_custom
+      2013
+      Refereed
+      [sheets; anil; amir; me]
+      "Ocamlot: OCaml Online Testing."
+      "The OCaml User and Developper Workshop."
+      ["pdf", "http://ocaml.org/meetings/ocaml/2013/proposals/ocamlot.pdf"];
+
+    save_custom
+      2013
+      Refereed
+      [cagdas; michel; fabrice; me]
+      "Profiling the Memory Usage of OCaml Applications without Changing their Behavior."
+      "The OCaml User and Developper Workshop."
+      ["pdf", "http://ocaml.org/meetings/ocaml/2013/proposals/profiling-memory.pdf"];
+
+    save_custom
       2012
       Refereed
       [me]
-      "OPAM, a package manager for OCaml"
-      "OCaml User and Developper Workshop."
+      "OPAM, a package manager for OCaml."
+      "The OCaml User and Developper Workshop."
       ["slides", "http://oud.ocaml.org/2012/slides/oud2012-paper17-slides.pdf";
        "video" , "http://www.youtube.com/watch?v=ivLqeRZJTGs&feature=plcp" ];
+
+    save_custom
+      2012
+      Refereed
+      [cagdas; me; fabrice; michel]
+      "Study of OCaml programs' memory behavior."
+      "The OCaml User and Developper Workshop."
+      [];
+
+    save_custom
+      2012
+      Refereed
+      [fabrice; me]
+      "Gestion de projet avec ocp-build."
+      "Journées Francophones des Langages Applicatifs."
+      ["pdf", "http://hal.inria.fr/docs/00/66/59/62/PDF/paper_10.pdf"];
 
     save
       2011
@@ -127,7 +205,7 @@ module Publis = struct
       Refereed
       [anil; me]
       "Mirage: ML kernels in the Cloud."
-      "ML Workshop."
+      "ML Family Workshop."
       ["slides", "http://www.slideshare.net/AnilMadhavapeddy/mirage-ml-kernels-in-the-\
                   cloud-ml-workshop-2010"];
 

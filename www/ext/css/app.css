@@ -1,0 +1,55 @@
+.publication .author {
+display: inline;
+font-style: italic;
+}
+.publication .authors,
+.publication .where {
+display: inline;
+}
+.publication .author,
+.publication .files,
+.publication {
+margin: 0em;
+padding: 0em;
+}
+.publication .title {
+color: black;
+font-weight: bold;
+display: inline;
+}
+.publication .year {
+margin-right: 4px;
+display: inline;
+float: right;
+padding: 2px;
+font-weight: bold;
+}
+.publication .files {
+margin-left: 10px;
+margin-top: 2px;
+text-align: left;
+display: inline;
+}
+.publication {
+padding: 0.4em;
+}
+
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+
+.footer, .push {
+height: 4em;
+font-size: 0.8em;
+}
