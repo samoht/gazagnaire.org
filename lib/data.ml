@@ -252,7 +252,7 @@ module Publis = struct
       [me]
       "Projection of Rational Pomset Expression."
       "Draft."
-      ["pdf", "Gazagnaire08-draft.pdf"];
+      ["pdf", "pub/Gazagnaire08-draft.pdf"];
 
     save
       2008
