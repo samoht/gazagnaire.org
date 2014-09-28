@@ -101,7 +101,7 @@ let home =
       <a class="button" href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a>
      <p>
       <h2>Office</h2>
-      FN10, Computer Laboratory, <br/>
+      FN14, Computer Laboratory, <br/>
       University of Cambridge, <br/>
       15 JJ Thomson Avenue, <br />
       Cambridge CB3 0FD, UK
