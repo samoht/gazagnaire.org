@@ -53,7 +53,7 @@ let home =
     <h2>Thomas Gazagnaire</h2>
 
     <p>I am a Senior Research Associate at the $computer_lab$ where I work on distributed
-    systems and functional programming. I am one of the main author of the
+    systems and functional programming. I am one of the main authors of the
     the $mirage$ operating system library and the $irmin$ distributed store.
     Before that, I was
     Chief Technical Officier at $ocamlpro$ where I designed and lead the implementation
