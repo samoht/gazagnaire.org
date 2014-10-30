@@ -95,17 +95,22 @@ let home =
 
     <div class="large-6 columns">
 
-    <h2>Contact</h2>
+    <br />
     <div class="image"><img src="thomas.png"/></div>
     <div class="contact">
       <a class="button" href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a>
      <p>
-      <h2>Office</h2>
+      <h2>Contact</h2>
       FN14, Computer Laboratory, <br/>
       University of Cambridge, <br/>
       15 JJ Thomson Avenue, <br />
       Cambridge CB3 0FD, UK
     </p>
+    <h2>Links</h2>
+    <ul>
+      <li>A <a href="./fuconf14/">2048</a> Tutorial in OCaml.</li>
+      <li>Various <a href="http://decks.openmirage.org/">slides</a> on Mirage and Irmin.</li>
+    </ul>
     </div>
     </div>
 
