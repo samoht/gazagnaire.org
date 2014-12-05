@@ -109,8 +109,16 @@ module Publis = struct
       2015
       Refereed
       [farinier; me; anil]
-      "Mergeable Data Structures"
-      "Journées Francophones des Langages Applicatifs.";
+      "Mergeable Persistent Data Structures"
+      "Les vingt-sixième Journées Francophones des Langages Applicatifs.";
+
+    save_custom
+      2014
+      Refereed
+      [loic; herve; blaise; me]
+      "Diagnosis from Scenarios."
+      "Journal of Discrete Event Dynamic Systems. Volume 24, Issue 4 , pp 353-415."
+      [];
 
     save_custom
       2014
@@ -135,14 +143,6 @@ module Publis = struct
       "Irmin: a branch-consistent distributed library database."
       "The OCaml User and Developper Workshop."
       ["pdf", "https://ocaml.org/meetings/ocaml/2014/ocaml2014_11.pdf"];
-
-    save_custom
-      2014
-      Refereed
-      [loic; herve; blaise; me]
-      "Diagnosis from Scenarios."
-      "Journal of Discrete Event Dynamic Systems. Volume 24, Issue 4 , pp 353-415."
-      [];
 
     save_custom
       2013
@@ -199,7 +199,7 @@ module Publis = struct
       Refereed
       [fabrice; me]
       "Gestion de projet avec ocp-build."
-      "Journées Francophones des Langages Applicatifs."
+      "Les vingt troisièmes Journées Francophones des Langages Applicatifs."
       ["pdf", "http://hal.inria.fr/docs/00/66/59/62/PDF/paper_10.pdf"];
 
     save
