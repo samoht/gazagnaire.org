@@ -87,6 +87,8 @@ let home =
        and a strong interest in Functional Programming and/or Operating System.
        Please send a resume (CV) and a motivation letter.</p>
        <ul>
+       <li><a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">
+         Various</a> Mirage-related projects</li>
        <li><a href="pub/m2.pdf">Weak Models of data consistency</a></li>
        <li>Large-scale monitoring of distributed applications</li>
        </ul>

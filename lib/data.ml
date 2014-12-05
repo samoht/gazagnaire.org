@@ -74,6 +74,8 @@ let jeremy = make_author "J. Yallop" "https://github.com/yallop"
 let gregory = make_author "G. Tsipenyuk" "#"
 let wang = make_author "P. Wang" "http://philippewang.info/"
 
+let farinier = make_author "B. Farinier" "#"
+
 let map_link (t,l) =  { text="["^t^"]"; href=l }
 
 module Publis = struct
@@ -103,6 +105,13 @@ module Publis = struct
 
   let () =
 
+    save
+      2015
+      Refereed
+      [farinier; me; anil]
+      "Mergeable Data Structures"
+      "Journées Francophones des Langages Applicatifs.";
+
     save_custom
       2014
       Refereed
@@ -128,11 +137,11 @@ module Publis = struct
       ["pdf", "https://ocaml.org/meetings/ocaml/2014/ocaml2014_11.pdf"];
 
     save_custom
-      2013
+      2014
       Refereed
       [loic; herve; blaise; me]
-      "Diagnosis from Scenarios, and applications."
-      "Journal of Discrete Event Dynamic Systems."
+      "Diagnosis from Scenarios."
+      "Journal of Discrete Event Dynamic Systems. Volume 24, Issue 4 , pp 353-415."
       [];
 
     save_custom
