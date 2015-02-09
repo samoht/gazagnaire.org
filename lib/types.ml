@@ -54,11 +54,16 @@ let short_name authors year =
   Printf.sprintf "%s%.2d" base (year - 2000)
 
 let html_of_refereed p =
-  html_of_refereed ~id:(short_name p.authors p.year) p
+  let html = html_of_refereed ~id:(short_name p.authors p.year) p in
+  <:html<$html$
+
+>>
 
 let html_of_tech p =
-  html_of_tech ~id:(short_name p.authors p.year) p
+  let html = html_of_tech ~id:(short_name p.authors p.year) p in
+  <:html<$html$
 
+>>
 
 type project = {
   name: string;
