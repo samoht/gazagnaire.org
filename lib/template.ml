@@ -89,6 +89,8 @@ let home =
        <ul>
        <li><a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">
          Various</a> Mirage-related projects</li>
+       <li><a href="pub/merge-semantics.pdf">Semantics of Mergeable Data-Structures</a></li>
+       <li><a href="pub/irmin-encryption.pdf">Storage Encryption for the Cloud</a></li>
        <li><a href="pub/m2.pdf">Weak Models of data consistency</a></li>
        <li>Large-scale monitoring of distributed applications</li>
        </ul>
