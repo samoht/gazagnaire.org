@@ -52,9 +52,13 @@ let home =
 
     <h2>Thomas Gazagnaire</h2>
 
-    <p>I am a Senior Research Associate at the $computer_lab$ where I work on distributed
-    systems and functional programming. I am one of the main authors of the
-    the $mirage$ operating system library and the $irmin$ distributed store.
+    <p>I am Chief Architect and co-Founder and at $unikernel$.
+    Previously, I was Senior Research
+    Associate at the $computer_lab$ where I work on distributed
+    systems and functional programming. I am one of the main authors and the
+    release manager of the
+    the $mirage$ operating system library and the main developer of the $irmin$
+    Git-like distributed store.
     Before that, I was
     Chief Technical Officier at $ocamlpro$ where I designed and lead the implementation
     of $opam$ and Principal Virtualisation Engineer at $onapp$.</p>

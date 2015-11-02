@@ -54,6 +54,7 @@ let hand = make_author "S. Hand" "http://www.cl.cam.ac.uk/~smh22/"
 let tim = make_author "T. Deegan" "http://www.tjd.phlegethon.org/"
 let derek = make_author "D. McAuley" "http://www.cs.nott.ac.uk/~drm/"
 let crowcroft = make_author "J. Crowcroft" "http://www.cl.cam.ac.uk/~jac22/"
+let leslie = make_author "I. Leslie" "https://www.cl.cam.ac.uk/~iml1/"
 let rostos = make_author "C. Rotsos" "http://www.cl.cam.ac.uk/~cr409/"
 let balraj = make_author "B. Singh" "#"
 let smith = make_author "S. Smith" "#"
@@ -67,6 +68,8 @@ let fabrice = make_author "F. Le Fessant" "http://fabrice.lefessant.net/"
 let michel = make_author "M. Mauny" "http://www.mauny.net/index.en.php"
 let louis = make_author "L. Gesbert" "http://louis.gesbert.fr/cv.en.html"
 let leonard = make_author "T. Leonard" "http://roscidus.com/blog/"
+let magnus = make_author "M. Skjegstad" "http://www.skjegstad.com/"
+let mindy = make_author "M. Preston" "http://www.somerandomidiot.com/"
 let sheets = make_author "D. Sheets" "https://github.com/dsheets"
 let shinwell = make_author "M. Shinwell" "http://www.three-tuns.net/mark"
 let leo = make_author "L. White" "https://github.com/lpw25"
@@ -104,6 +107,27 @@ module Publis = struct
   let causaux = "Causal Message Sequence Charts."
 
   let () =
+
+    save_custom
+      2015
+      Refereed
+      [anil;amir;me;jeremy;sheets]
+      "The State of the OCaml Platform."
+      "OCaml Workshop 2015" [];
+
+    save_custom
+      2015
+      Refereed
+      [mindy;magnus;me;mort;anil]
+      "Persistent Networking with Irmin and MirageOS"
+      "OCaml Workskop 2015" [];
+
+    save
+      2015
+      Refereed
+      [anil;leonard;magnus;me;sheets;dave;mort;amir;balraj;jonlud;crowcroft;leslie]
+      "Jitsu: Just-In-Time Summoning of Unikernels"
+      "12th USENIX Symposium on Networked Systems Design and Implementation (NSDI 15).";
 
     save
       2015
@@ -434,6 +458,7 @@ let ens_lyon = <:html<<a href="http://www.ens-lyon.eu/">ENS Lyon</a>&>>
 let ens_cachan = <:html<<a href="http://www.ens-rennes.fr">ENS Rennes</a>&>>
 let ocamlpro = <:html<<a href="http://www.ocamlpro.com/">OCamlPro</a>&>>
 let computer_lab = <:html<<a href="http://cl.cam.ac.uk">University of Cambridge</a>&>>
+let unikernel = <:html<<a href="http://unikernel.com">Unikernel Systems</a>&>>
 let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
 let opam = <:html<<a href="http://opam.ocamlpro.com/">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
