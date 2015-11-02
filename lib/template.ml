@@ -52,8 +52,10 @@ let home =
 
     <h2>Thomas Gazagnaire</h2>
 
-    <p>I am Chief Architect and co-Founder and at $unikernel$.
-    Previously, I was Senior Research
+    <p>I am Chief Architect and co-Founder at $unikernel$ where we work on
+    making $unikernels$ available and used everywhere.</p>
+
+    <p>Previously, I was Senior Research
     Associate at the $computer_lab$ where I work on distributed
     systems and functional programming. I am one of the main authors and the
     release manager of the
