@@ -52,28 +52,25 @@ let home =
 
     <h2>Thomas Gazagnaire</h2>
 
-    <p>I am Chief Architect and co-Founder at $unikernel$ where I work on
-    making $unikernels$ easier to use so that they can be shipped and deployed
-    everywhere.</p>
+    <p>I am engineer at $docker$. Previously, I co-founded $unikernel$, where
+    I was Chief Architect, to
+    make $unikernels$ easier to use so that they can be shipped and deployed
+    everywhere, while I also was Senior Research
+    Associate at the $computer_lab$. Before that, I was CTO of $ocamlpro$,
+    Principal Virtualisation Engineer at $onapp$, and Senior Software Engineer
+    at $citrix$. I completed my Ph.D on distributed systems at $inria$/$irisa$ in the
+    $distribcom$ project and I obtained my Master and Bachelor degrees from
+    $ens_lyon$ and $ens_cachan$.</p>
 
-    <p>Previously, I was Senior Research
-    Associate at the $computer_lab$ where I work on distributed
-    systems and functional programming. I am one of the main authors and the
-    release manager of the
+    I am one of the main authors of the
     the $mirage$ operating system library and the main developer of the $irmin$
-    Git-like distributed store.
-    Before that, I was
-    Chief Technical Officier at $ocamlpro$ where I designed and lead the implementation
-    of $opam$ and Principal Virtualisation Engineer at $onapp$.</p>
+    Git-like distributed store. I previously designed and lead the implementation
+    of the $opam$ package manager, and I've worked on $xenserver$.
 
-    <p>I was also a postdoctoral fellow at $inria_sop$, in the $indes$ project
-    and a Senior Software Engineer at $citrix$, working on $xenserver$.
-    I completed my Ph.D in 2008 at $irisa$ in the $distribcom$ project.
-    I obtained my Master and Bachelor degrees from $ens_lyon$ and $ens_cachan$.</p>
-
-    <h2>Research</h2>
-    <p>My research interests primarily involve the application of formal methods and
-    functional programming languages to complex-system engineering problems. More generally,
+    <h2>Interests</h2>
+    <p>My interests primarily involve the application of formal methods and
+    functional programming languages to complex-system engineering problems.
+    More generally,
     I have a wide range of research and application interests including:</p>
     <ul>
       <li>Cloud-computing;</li>
@@ -88,20 +85,6 @@ let home =
     <p>I am doing most of my software developments in $ocaml$. My projects
     are hosted on $github$.</p>
 
-    <h2>Open Positions</h2>
-    <p>I am looking for students interested to work on any project related to
-       $mirage$. Ideal profiles: master in CS, with a taste of formal methods
-       and a strong interest in Functional Programming and/or Operating System.
-       Please send a resume (CV) and a motivation letter.</p>
-       <ul>
-       <li><a href="https://github.com/mirage/mirage-www/wiki/Pioneer-Projects">
-         Various</a> Mirage-related projects</li>
-       <li><a href="pub/merge-semantics.pdf">Semantics of Mergeable Data-Structures</a></li>
-       <li><a href="pub/irmin-encryption.pdf">Storage Encryption for the Cloud</a></li>
-       <li><a href="pub/m2.pdf">Weak Models of data consistency</a></li>
-       <li>Large-scale monitoring of distributed applications</li>
-       </ul>
-
     </div>
 
     <div class="large-6 columns">
@@ -110,17 +93,12 @@ let home =
     <div class="image"><img src="thomas.png"/></div>
     <div class="contact">
       <a class="button" href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a>
-     <p>
-      <h2>Contact</h2>
-      FN14, Computer Laboratory, <br/>
-      University of Cambridge, <br/>
-      15 JJ Thomson Avenue, <br />
-      Cambridge CB3 0FD, UK
-    </p>
     <h2>Links</h2>
     <ul>
       <li>A <a href="./fuconf14/">2048</a> Tutorial in OCaml.</li>
-      <li>Various <a href="http://decks.openmirage.org/">slides</a> on Mirage and Irmin.</li>
+      <li>Various <a href="http://decks.openmirage.org/">slides</a> on MirageOS
+          and Irmin.</li>
+      <li>Une rapide <a href="http://www.dailymotion.com/video/x3ihqqa_conf-42-meetup-oups_tech?start=5026">introduction</a> à MirageOS</li>
     </ul>
     </div>
     </div>

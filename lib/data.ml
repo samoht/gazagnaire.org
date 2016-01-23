@@ -376,7 +376,7 @@ module Projects = struct
   let () =
 
     save
-      "Mirage"
+      "MirageOS"
       <:html<
          Mirage OS is a library operating system that constructs unikernels for
          secure, high-performance network applications across a variety of cloud
@@ -449,6 +449,7 @@ let dblp = <:html<<a href ="http://www.informatik.uni-trier.de/~ley/db/indices/a
 let inria_sop = <:html<<a href="http://www-sop.inria.fr/">INRIA sophia-antipolis</a>&>>
 let indes = <:html<<a href="http://www-sop.inria.fr/indes/">INDES</a>&>>
 let irisa = <:html<<a href="http://www.irisa.fr/">IRISA</a>&>>
+let inria = <:html<<a href="http://www.inria.fr/">Inria</a>&>>
 let distribcom = <:html<<a href="http://www.irisa.fr/distribcom/">DistribCom</a>&>>
 let citrix = <:html<<a href="http://www.citrix.com/">Citrix</a>&>>
 let xenserver = <:html<<a href="http://www.citrix.com/xenserver">XenServer</a>&>>
@@ -463,5 +464,6 @@ let unikernels = <:html<<a href="http://unikernel.com/files/2014-cacm-unikernels
 let onapp = <:html<<a href="http://onapp.com/">OnApp</a>&>>
 let opam = <:html<<a href="http://opam.ocamlpro.com/">OPAM</a>&>>
 let cow = <:html<<a href="http://www.github.com/mirage/ocaml-cow">CoW</a>&>>
-let mirage = <:html<<a href="http://www.openmirage.org/">Mirage</a>&>>
+let mirage = <:html<<a href="https://mirage.io/">MirageOS</a>&>>
 let irmin = <:html<<a href="https://github.com/mirage/irmin">Irmin</a>&>>
+let docker = <:html<<a href="https://www.docker.com/">Docker</a>&>>
