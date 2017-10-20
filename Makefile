@@ -1,6 +1,6 @@
-include Makefile.private # should define DEST
+#include Makefile.private # should define DEST
 
-BUILD = ocamlbuild -use-ocamlfind -tags "syntax(camlp4o),package(cow.syntax),package(cow),package(unix)"
+BUILD = ocamlbuild -use-ocamlfind -tags "syntax(camlp4o),package(cow.syntax),package(cow),package(unix),package(ezjsonm)"
 
 all:
 	$(BUILD) lib/template.byte --

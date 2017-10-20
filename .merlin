@@ -1,3 +1,3 @@
-PKG cow
-B _build/**
-S lib/
+PKG cow ezjsonm unix
+B _build/lib
+S lib

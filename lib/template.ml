@@ -180,6 +180,7 @@ let process pages =
   in
   List.iter aux pages
 
+(*
 let () =
   Printf.printf "Generating index.html and papers.html... %!";
   process [
@@ -188,3 +189,102 @@ let () =
     { text="projects"; href="projects.html" }, projects;
   ];
   Printf.printf "[Done]\n"
+*)
+
+let all_authors = ref []
+
+let table = [
+  "me", "T. Gazagnaire";
+  "blaise", "B. Genest";
+  "loic", "L. Hélouët";
+  "shaofa", "S. Yang";
+  "thiagu", "P.S. Thiagarajan";
+  "deb", "D. Biswas";
+  "claude", "C. Jard";
+  "herve", "H. Marchand";
+  "luc", "L. Bougé";
+  "francois", "F. Bodin";
+  "richard", "R. Sharp";
+  "dave", "D. Scott";
+  "jonlud", "J. Ludlam";
+  "jondav", "J. Davies";
+  "jsk", "J. Knowles";
+  "vincent", "V. Hanquez";
+  "marcus", "M. Granado";
+  "gerard", "G. Boudol";
+  "ilaria", "I. Castellani";
+  "bruno", "B. Arnaldi";
+  "stefano", "S. Soatto";
+  "paulo", "P. Favaro";
+  "hailin", "H. Jin";
+  "manuel", "M. Serrano";
+  "anil",  "A. Madhavapeddy";
+  "mort", "R. Mortier";
+  "rip", "R. Sohan";
+  "hand", "S. Hand";
+  "tim", "T. Deegan";
+  "derek", "D. McAuley";
+  "crowcroft", "J. Crowcroft";
+  "leslie", "I. Leslie";
+  "rostos", "C. Rotsos";
+  "balraj", "B. Singh";
+  "smith", "S. Smith";
+  "amir", "A. Chaudhry";
+  "dimino", "J. Dimino";
+  "p_weis", "P. Weis";
+  "cagdas", "Ç. Bozman";
+  "fabrice", "F. Le Fessant";
+  "michel", "M. Mauny";
+  "louis", "L. Gesbert";
+  "leonard", "T. Leonard";
+  "magnus", "M. Skjegstad";
+  "mindy", "M. Preston";
+  "sheets", "D. Sheets";
+  "shinwell", "M. Shinwell";
+  "leo", "L. White";
+  "jeremy", "J. Yallop";
+  "gregory", "G. Tsipenyuk";
+  "wang", "P. Wang";
+  "farinier", "B. Farinier";
+]
+
+let author_id a =
+  let (id, _) = List.find (fun x -> a.Cow.Html.text = snd x) table in
+  id
+
+let json_of_author ({ Cow.Html.text; href } as a) =
+  let id = author_id a in
+  id, `O [
+    "name", `String text;
+    "url" , `String href;
+  ]
+
+let strip s = String.sub s 1 (String.length s - 2)
+
+let json_of_paper { title; authors; where; files; year } =
+  List.iter (fun a ->
+      if not (List.mem a !all_authors) then all_authors := a :: !all_authors
+    ) authors;
+  `O [
+    "title"  , `String title;
+    "authors", `A (List.map (fun a -> `String (author_id a)) authors);
+    "where"  , `String where;
+    "year"   , `String (string_of_int year);
+    "files"  , `A (List.map (fun { Cow.Html.text; href } ->
+        `O ["kind", `String (strip text); "url", `String href]
+      ) files);
+  ]
+
+let () =
+  let papers = List.map json_of_paper Data.refereed_publications in
+  let tech = List.map json_of_paper Data.tech_publications in
+  let authors = List.map json_of_author !all_authors in
+
+  let out file json =
+    let oc = open_out file in
+    Ezjsonm.to_channel ~minify:false oc json;
+    close_out oc
+  in
+  out "papers.json" (`A papers);
+  out "tech.json" (`A tech);
+  out "authors.json" (`O authors)
