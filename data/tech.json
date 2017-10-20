@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Projection of Rational Pomset Expression.",
+    "authors": [
+      "me"
+    ],
+    "where": "Draft.",
+    "year": "2008",
+    "files": [
+      {
+        "kind": "pdf",
+        "url": "pub/Gazagnaire08-draft.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Langages de Scénarios: Utiliser des Ordres Partiels pour Modéliser, Vérifier et Superviser des Systèmes Parallèles et Répartis.",
+    "authors": [
+      "me"
+    ],
+    "where": "Ph.D. Thesis, University of Rennes 1.",
+    "year": "2008",
+    "files": [
+      {
+        "kind": "pdf",
+        "url": "pub/gazagnaire-phd.pdf"
+      },
+      {
+        "kind": "slides",
+        "url": "pub/gazagnaire-phd-slides.pdf"
+      },
+      {
+        "kind": "book",
+        "url": "http://www.amazon.fr/Langages-Scnarios-Thomas-Gazagnaire/dp/6131513082"
+      }
+    ]
+  },
+  {
+    "title": "Causal Message Sequence Charts.",
+    "authors": [
+      "me",
+      "shaofa",
+      "loic",
+      "blaise",
+      "thiagu"
+    ],
+    "where": "Research Report RR-6301.",
+    "year": "2007",
+    "files": [
+      {
+        "kind": "pdf",
+        "url": "pub/RR-6301.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Online Abstraction of Distributed Executions.",
+    "authors": [
+      "me",
+      "loic",
+      "claude"
+    ],
+    "where": "Research Report RR-5736.",
+    "year": "2005",
+    "files": [
+      {
+        "kind": "pdf",
+        "url": "pub/RR-5736.pdf"
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+a {
+    color: #008cba;
+    text-decoration: none;
+    line-height: inherit;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.card-body a {
+    color: #aaa;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+    margin-bottom: 260px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    /* Set the fixed height of the footer here */
+    height: 200px;
+    line-height: 40px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+/* Publications */
+
+.publication .authors {
+    display: inline;
+    font-style: italic;
+}
+
+.publication .author {
+    display: inline;
+    font-style: italic;
+}
+
+.publication .author a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.publication .author a:hover {
+    color: grey;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.publication .files a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.publication .files a:hover {
+    color: grey;
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+.publication {
+    margin: 0em;
+    padding: 0.5em;
+}
+
+.publication .title {
+    color: black;
+    font-weight: bold;
+    display: inline;
+}
+
+.publication .where {
+    display: inline;
+}
+
+.publication .year {
+    margin-right: 4px;
+    display: inline;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    padding: 2px;
+    color: #CC3300;
+}
+
+.publication .files {
+    margin-left: 10px;
+    margin-top: 2px;
+    text-align: left;
+}
