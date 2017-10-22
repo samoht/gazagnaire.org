@@ -4,8 +4,8 @@
           <div class="col-2"></div>
           <div class="col-8">
           <blockquote class="blockquote text-center">
-          <p class="mb-0">Made by <a href="https://github.com/samoht/ramen">Ramen.</a></p>
-          <div class="blockquote-footer">Last modified {{ site.date }}.</div>
+          <p class="small">Made by <a href="https://github.com/samoht/ramen">Ramen.</a></p>
+          <div class="small blockquote-footer">Last modified {{ site.date }}.</div>
           </div>
         </div>
       </div>
