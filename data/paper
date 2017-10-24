@@ -1,0 +1,29 @@
+entry: .
+---
+<div class="publication">
+  <div class="year">{{entry.year}}</div>
+  <div class="title">{{entry.title}}</div>
+  <div class="authors">
+{{  for a in entry.authors
+      if (a != entry.authors.last) }}
+    <div class="author">
+      <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>,
+    </div>
+{{    else }}
+    <div class="author">
+      <a href="{{authors.[entry.authors.last].url}}">
+        {{authors.[entry.authors.last].name}}.
+      </a>
+    </div>
+{{    endif
+    endfor }}
+  </div>
+  <div class="where">{{entry.where}}</div>
+  {{ if entry.files }}
+  <div class="files"> {{
+    for file in entry.files
+  }} <a href="{{file.url}}">[{{file.kind}}]</a>
+  {{ endfor }}
+  </div> {{
+  endif }}
+</div>
