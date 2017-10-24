@@ -1,13 +1,7 @@
-#include Makefile.private # should define DEST
-
-BUILD = ocamlbuild -use-ocamlfind -tags "syntax(camlp4o),package(cow.syntax),package(cow),package(unix),package(ezjsonm)"
+include Makefile.private # should define DEST
 
 all:
-	$(BUILD) lib/template.byte --
-
-clean:
-	rm -f *.cmo *.cmi *~ template.byte
-	rm -rf _build
+	ramen
 
 update: all
-	rsync -avz www/ $(DEST)
+	rsync -avz site/ $(DEST)
