@@ -8,53 +8,20 @@ title: Papers
   <div class="row">
     <div class="col-1"></div>
     <div class="col-9">
+
       <h2>Publications</h2>
       <p>My <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</a> page lists some of my publications.</p>
       <br/>
 
       <h2>Refereed publications</h2>
 
-{{ for i in papers }}
-      <div class="publication">
-        <div class="year">{{i.year}}</div>
-        <div class="title">{{i.title}}</div>
-        <div class="authors">
-{{ for a in i.authors }}
-          <div class="author">
-            <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>
-          </div>
-{{ endfor }}
-        </div>
-        <div class="where">{{i.where}}</div>
-        <div class="files">
-{{ for f in i.files }}
-          <a href="{{f.url}}">[{{f.kind}}]</a>
-{{ endfor }}
-        </div>
-      </div>
-{{ endfor }}
+      {{ for i in papers paper(entry: i) endfor }}
 
       <br/>
 
       <h2>Tech reports</h2>
 
-{{ for i in tech }}
-      <div class="publication">
-        <div class="year">{{i.year}}</div>
-        <div class="title">{{i.title}}</div>
-{{ for a in i.authors }}
-        <div class="authors">
-          <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>
-        </div>
-{{ endfor }}
-        <div class="where">{{i.where}}</div>
-        <div class="files">
-{{ for f in i.files }}
-          <a href="{{f.url}}">[{{f.kind}}]</a>
-{{ endfor }}
-        </div>
-      </div>
-{{ endfor }}
+      {{ for i in tech paper(entry: i) endfor }}
 
     </div>
   </div>

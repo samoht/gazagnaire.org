@@ -9,8 +9,7 @@
       "sheets"
     ],
     "where": "OCaml Workshop 2015",
-    "year": "2015",
-    "files": []
+    "year": "2015"
   },
   {
     "title": "Persistent Networking with Irmin and MirageOS",
@@ -22,8 +21,7 @@
       "anil"
     ],
     "where": "OCaml Workskop 2015",
-    "year": "2015",
-    "files": []
+    "year": "2015"
   },
   {
     "title": "Jitsu: Just-In-Time Summoning of Unikernels",
@@ -75,8 +73,7 @@
       "me"
     ],
     "where": "Journal of Discrete Event Dynamic Systems. Volume 24, Issue 4 , pp 353-415.",
-    "year": "2014",
-    "files": []
+    "year": "2014"
   },
   {
     "title": "Metaprogramming with ML modules in the MirageOS.",
@@ -242,8 +239,7 @@
       "michel"
     ],
     "where": "The OCaml User and Developper Workshop.",
-    "year": "2012",
-    "files": []
+    "year": "2012"
   },
   {
     "title": "Gestion de projet avec ocp-build.",
