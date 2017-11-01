@@ -1,29 +1,41 @@
 entry: .
 ---
-<div class="publication">
-  <div class="year">{{entry.year}}</div>
-  <div class="title">{{entry.title}}</div>
-  <div class="authors">
-{{  for a in entry.authors
-      if (a != entry.authors.last) }}
-    <div class="author">
-      <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>,
+<div class="card mb-2">
+  <div class="card-body">
+    <h4 class="card-title">
+      <small class="text-muted mr-5">{{entry.year}}</small>
+      {{entry.title}}
+    </h4>
+    <div class="card-text authors">
+      {{ for a in entry.authors }}
+      {{ if (a != entry.authors.last) }}
+      <div class="author">
+        <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>,
+      </div>
+      {{ else }}
+      <div class="author">
+        <a href="{{authors.[entry.authors.last].url}}">
+          {{authors.[entry.authors.last].name}}.
+        </a>
+      </div>
+      {{ endif }}
+      {{ endfor }}
     </div>
-{{    else }}
-    <div class="author">
-      <a href="{{authors.[entry.authors.last].url}}">
-        {{authors.[entry.authors.last].name}}.
-      </a>
-    </div>
-{{    endif
-    endfor }}
+    <div class="where">{{entry.where}}</div>
+    {{ if entry.files }}
+    {{if entry.abstract}}
+    <div class="mt-3 mb-2 small"><b>Abstract.</b> {{entry.abstract}}</div>
+    {{endif}}
   </div>
-  <div class="where">{{entry.where}}</div>
-  {{ if entry.files }}
-  <div class="files"> {{
-    for file in entry.files
-  }} <a href="{{file.url}}">[{{file.kind}}]</a>
-  {{ endfor }}
-  </div> {{
-  endif }}
+  <div class="card-footer text-muted">
+    <div class="files text-center">
+      {{ for file in entry.files }}
+      <a class="mr-2 ml-2" href="{{file.url}}">
+        <i class="fa fa-download"></i>
+        ({{file.kind}})
+      </a>
+      {{ endfor }}
+    </div>
+    {{ endif }}
+  </div>
 </div>

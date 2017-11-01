@@ -55,42 +55,16 @@ body {
 
 /* Publications */
 
-.publication .authors {
+.author {
     display: inline;
     font-style: italic;
 }
 
-.publication .author {
-    display: inline;
-    font-style: italic;
-}
-
-.publication {
-    margin: 0em;
-    padding: 0.5em;
-}
-
-.publication .title {
-    color: black;
-    font-weight: bold;
+.where {
     display: inline;
 }
 
-.publication .where {
-    display: inline;
-}
-
-.publication .year {
-    margin-right: 4px;
-    display: inline;
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-    padding: 2px;
-    color: #CC3300;
-}
-
-.publication .files {
+.files {
     margin-left: 10px;
     margin-top: 2px;
     text-align: left;
