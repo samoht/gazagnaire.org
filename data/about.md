@@ -1,6 +1,6 @@
 <h2 class="mb-5">About</h2>
 
-I am engineer at [Docker.] Previously, I co-founded [Unikernel Systems,]
+I am an engineer at [Docker.] Previously, I co-founded [Unikernel Systems,]
 where I was Chief Architect, to make [unikernels] easier to use so that
 they can be shipped and deployed everywhere, while I also was Senior
 Research Associate at the [University of Cambridge.] Before that, I was
