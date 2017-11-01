@@ -11,16 +11,31 @@
     <title >Thomas Gazagnaire :: Home</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+      >
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      >
+
+    <!--- Fonts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      >
 
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
+
   </head>
   <body>
 
-
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <div class="container">
   <button
     class="navbar-toggler"
@@ -33,20 +48,13 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-
-
+    <ul class="navbar-nav ml-5">
       <li class="nav-item active">
       <a class="nav-link" href="index.html">Home</a>
       </li>
-
-
-
       <li class="nav-item">
       <a class="nav-link" href="papers.html">Papers</a>
       <li>
-
-
     </div>
   </div>
   </div>
@@ -56,12 +64,61 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-1"></div>
-    <div class="col-6">
-      <h1 id="Thomas-Gazagnaire">Thomas Gazagnaire</h1>
 
-<p><br /></p>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-8"><div class="row">
+  <div class="col-md-2">
+    <img class="img-fluid img-profile rounded-circle" src="thomas.jpg" alt="Thomas"></img>
+  </div>
+  <div class="col-md-10">
+    <h1 class="mb-0">Thomas <span class="text-primary">Gazagnaire</span></h1>
+    <div class="subheading mb-2">Computer Scientist and Software Engineer.
+      <a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col">
+    <ul class="list-inline list-social-icons mb-5">
+      <li class="list-inline-item">
+        <a href="https://twitter.com/eriangazag">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="https://www.linkedin.com/in/tgazagna/">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a href="https://github.com/samoht">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <hr class="mb-5">
+
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-8"><h2 id="About">About</h2>
+
 <p>I am engineer at <a href='https://docker.com/'>Docker.</a> Previously, I co-founded <a href='http://unikernel.com/'>Unikernel Systems,</a>
 where I was Chief Architect, to make [unikernels] easier to use so that
 they can be shipped and deployed everywhere, while I also was Senior
@@ -76,23 +133,13 @@ store. I previously designed and lead the implementation <a href='http://opam.oc
 package manager for <a href='https://ocaml.org/'>OCaml</a> and I&#39;ve worked on <a href='http://www.citrix.com/xenserver/'>XenServer.</a></p>
 
     </div>
-    <div class="col-4">
-      <br/>
-      <div class="right card text-white bg-dark mb-3" style="width: 15rem;">
-        <img src="http://gazagnaire.org/thomas.png" class="card-image-top" alt="hello!">
-        <div class="card-body">
-          <a href="mailto:thomas@gazagnaire.org">thomas@gazagnaire.org</a>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <br />
+  <div class="mb-5"></div>
 
   <div class="row">
-    <div class="col-1"></div>
-    <div class="col-6">
-      <h2 id="Interests">Interests</h2>
+    <div class="col-2"></div>
+    <div class="col-md-8"><h2 id="Interests">Interests</h2>
 
 <p>My interests primarily involve the application of formal methods and
 functional programming languages to complex-system engineering
@@ -104,31 +151,27 @@ application interests including:</p>
 hosted on <a href='http://www.github.com/samoht/'>GitHub.</a></p>
 
     </div>
-    <div class="col-4">
-      <div role='group' class='btn-group'>
-  <a class='btn btn-outline-secondary' href='https://github.com/samoht/'>
-    <i aria-hidden='true' class='fa fa-github'></i>
-  </a>
-  <a class='btn btn-outline-secondary' href='https://twitter.com/eriangazag'>
-    <i aria-hidden='true' class='fa fa-twitter'></i>
-  </a>
-  <a class='btn btn-outline-secondary' href='https://www.linkedin.com/in/tgazagna/'>
-    <i aria-hidden='true' class='fa fa-linkedin'></i>
-  </a>
-</div>
-    </div>
   </div>
 
 </div>
-
     <footer class="footer">
       <div class="container">
+
+        <div class="row">
+          <div class="col">
+            <hr class="mb-5">
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-2"></div>
           <div class="col-8">
-          <blockquote class="blockquote text-center">
-          <p class="small">Made by <a href="https://github.com/samoht/ramen">Ramen.</a></p>
-          <div class="small blockquote-footer">Last modified 24/10/2017.</div>
+            <blockquote class="blockquote text-center">
+              <p class="small">Made by
+                <a href="https://github.com/samoht/ramen">Ramen.</a>
+                <span class="small blockquote-footer">Last modified 1/11/2017.
+                </span>
+              </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,4 @@
-# Thomas Gazagnaire
-
-<br/>
+## About
 
 I am engineer at [Docker.] Previously, I co-founded [Unikernel Systems,]
 where I was Chief Architect, to make [unikernels] easier to use so that

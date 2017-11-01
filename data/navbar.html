@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <div class="container">
   <button
     class="navbar-toggler"
@@ -11,7 +11,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-5">
 {{ for i in site.pages }}
 {{ if i.url && i.title && (i = site.page) }}
       <li class="nav-item active">

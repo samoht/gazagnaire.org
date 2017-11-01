@@ -1,17 +1,36 @@
+body {
+    font-family: 'Roboto';
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #343a40;
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bg-dark {
+    background-color: #0B619A!important;
+}
+
 a {
-    color: #008cba;
+    color: #0B619A;
     text-decoration: none;
     line-height: inherit;
+}
+
+.text-primary {
+    color: #0B619A!important;
 }
 
 a:hover {
     color: grey;
     text-decoration: none;
     border-bottom: 0px;
-}
-
-.card-body a {
-    color: #aaa;
 }
 
 /* Sticky footer styles
@@ -28,11 +47,10 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 40px;
     /* Set the fixed height of the footer here */
     height: 200px;
     line-height: 40px; /* Vertically center the text there */
-    background-color: #f5f5f5;
 }
 
 /* Publications */
