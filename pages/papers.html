@@ -9,14 +9,17 @@ title: Papers
     <div class="col-2"></div>
     <div class="col-8">
 
-      <h2>Publications</h2>
+      <h2 class="mb-5">Publications</h2>
 
-      <p class="mb-5"><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</a>, <a href="https://www.researchgate.net/profile/Thomas_Gazagnaire">Research
+      <p class="mb-5">
+        I have published in various journals and conferences on topics
+        related to <att>concurrency theory</att>, system design and functional
+        programming languages. <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/g/Gazagnaire:Thomas.html">DBLP</a>, <a href="https://www.researchgate.net/profile/Thomas_Gazagnaire">Research
       Gate</a>
       and <a href="https://scholar.google.fr/citations?user=gqnNiyYAAAAJ">Google
-      Scholar</a> lists some of my publications. Or see
-      my <a href="#publications">journal and conferences</a>
-      publications and my <a href="#reports">technical reports</a>.
+      Scholar</a> lists some of my publications. Or see below
+      the full list of my <a href="#publications">journal and conferences</a>
+      publications and of my <a href="#reports">technical reports</a>.
 
     </div>
   </div>
@@ -24,9 +27,12 @@ title: Papers
   <section id="publications" class="pt-5">
     <hr class="mb-5">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
-        <h3 class="mb-5">Journals and Conferences</h3>
+      <div class="col-1"></div>
+      <div class="col-10">
+        <h3 class="mb-5">
+          <i class="fa fa-book"></i>
+          Journals and Conferences
+        </h3>
         {{ for i in papers paper(entry: i) endfor }}
       </div>
     </div>
@@ -35,9 +41,12 @@ title: Papers
   <section id="reports" class="pt-5">
     <hr class="mb-5">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
-      <h3 class="mb-5">Technical Reports</h3>
+      <div class="col-1"></div>
+      <div class="col-10">
+        <h3 class="mb-5">
+          <i class="fa fa-file-text"></i>
+          Technical Reports
+        </h3>
       {{ for i in tech paper(entry: i) endfor }}
     </div>
   </div>

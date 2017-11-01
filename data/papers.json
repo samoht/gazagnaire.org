@@ -8,11 +8,11 @@
       "jeremy",
       "sheets"
     ],
-    "where": "OCaml Workshop 2015",
+    "where": "OCaml Workshop 2015.",
     "year": "2015"
   },
   {
-    "title": "Persistent Networking with Irmin and MirageOS",
+    "title": "Persistent Networking with Irmin and MirageOS.",
     "authors": [
       "mindy",
       "magnus",
@@ -20,11 +20,11 @@
       "mort",
       "anil"
     ],
-    "where": "OCaml Workskop 2015",
+    "where": "OCaml Workskop 2015.",
     "year": "2015"
   },
   {
-    "title": "Jitsu: Just-In-Time Summoning of Unikernels",
+    "title": "Jitsu: Just-In-Time Summoning of Unikernels.",
     "authors": [
       "anil",
       "leonard",
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "title": "Mergeable Persistent Data Structures",
+    "title": "Mergeable Persistent Data Structures.",
     "authors": [
       "farinier",
       "me",
@@ -74,7 +74,15 @@
       "me"
     ],
     "where": "Journal of Discrete Event Dynamic Systems. Volume 24, Issue 4 , pp 353-415.",
-    "year": "2014"
+      "year": "2014",
+      "abstract":
+      "Diagnosis of a system consists in providing explanations to a supervisor from a partial observation of the system and a model of possible executions. This paper proposes a partial order diagnosis algorithm that recovers sets of scenarios which correspond to a given observation. Systems are modeled using High-level Message Sequence Charts (HMSCs), and the diagnosis is given as a new HMSC, which behaviors are all explanations of the partial observation. The main difficulty is that some actions of the monitored system are unobservable but may still induce some causal ordering among observed events. We first give an offline centralized diagnosis algorithm, then we discuss a decentralized version of this algorithm. We then give an online diagnosis algorithm, and define syntactic criteria under which the memory used can be bounded. This allows us to give a complete diagnosis framework for infinite state systems, with a strong emphasis on concurrency and causal ordering in behaviors. The last contribution of the paper is an application of diagnosis techniques to a security problem called anomaly detection. Anomaly detection consists in comparing what occurs in the system with usual/expected behaviors, and raising an alarm when some unusual behavior (meaning a potential attack) occurs.",
+      "files": [
+          {
+            "kind": "pdf",
+            "url": "https://hal.inria.fr/hal-00879441"
+          }
+      ]
   },
   {
     "title": "Metaprogramming with ML modules in the MirageOS.",
