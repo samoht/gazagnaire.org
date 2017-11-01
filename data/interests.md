@@ -1,4 +1,4 @@
-## Interests
+<h2 class="mb-5">Interests</h2>
 
 My interests primarily involve the application of formal methods and
 functional programming languages to complex-system engineering

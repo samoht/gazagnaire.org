@@ -1,4 +1,4 @@
-## About
+<h2 class="mb-5">About</h2>
 
 I am engineer at [Docker.] Previously, I co-founded [Unikernel Systems,]
 where I was Chief Architect, to make [unikernels] easier to use so that
