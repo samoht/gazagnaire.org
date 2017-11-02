@@ -1,11 +1,24 @@
 entry: .
+kind: .
 ---
-<div class="card mb-2">
-  <div class="card-body">
-    <h4 class="card-title">
-      <small class="text-muted mr-5">{{entry.year}}</small>
+<div class="small card {{if entry.abstract}}border-info{{else}}border-light{{endif}} mb-0">
+  <div class="card-body pt-1 pb-1">
+    <h5 class="card-title mb-1">
+      <small class="text-muted mr-3">{{entry.year}}</small>
       {{entry.title}}
-    </h4>
+      {{ if entry.files }}
+      {{for file in entry.files }}
+      <a class="small text-mutex ml-2" href="{{file.url}}">
+        {{if   file.kind = 'pdf'   }}<i class="fa fa-file-pdf-o"></i>
+        {{elif file.kind = 'slides'}}<i class="fa fa-file-image-o"></i>
+        {{elif file.kind = 'video' }}<i class="fa fa-file-video-o"></i>
+        {{elif file.kind = 'book'  }}<i class="fa fa-book"></i>
+        {{else                     }}<i class="fa fa-download"></i>
+        {{endif}}
+      </a>
+      {{endfor}}
+      {{endif}}
+    </h5>
     <div class="card-text authors">
       {{ for a in entry.authors }}
       {{ if (a != entry.authors.last) }}
@@ -22,22 +35,10 @@ entry: .
       {{ endfor }}
     </div>
     <div class="where">{{entry.where}}</div>
-    {{ if entry.files }}
     {{if entry.abstract}}
-    <div class="mt-3 mb-2 small">
-      <b>Abstract.</b> {{entry.abstract}}
+    <div class="mt-3 mb-2">
+      <span class="font-weight-bold">Abstract.</span> {{entry.abstract}}
     </div>
     {{endif}}
-  </div>
-  <div class="card-footer text-muted">
-    <div class="files text-center">
-      {{ for file in entry.files }}
-      <a class="mr-2 ml-2" href="{{file.url}}">
-        <i class="fa fa-download"></i>
-        ({{file.kind}})
-      </a>
-      {{ endfor }}
-    </div>
-    {{ endif }}
   </div>
 </div>

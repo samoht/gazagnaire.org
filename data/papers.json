@@ -304,8 +304,9 @@
       "me",
       "anil"
     ],
-    "where": "The 15th ACM SIGPLAN International Conference on Functional Programming.",
+    "where": "The 15th ACM SIGPLAN International Conference on Functional Programming (ICFP 2010).",
     "year": "2010",
+    "abstract": "We present a case-study of using OCaml within a large product development project, focussing on both the technical and nontechnical issues that arose as a result. We draw comparisons between the OCaml team and the other teams that worked on the project, providing comparative data on hiring patterns and crossteam code contribution.",
     "files": [
       {
         "kind": "pdf",
@@ -355,7 +356,7 @@
       "me",
       "vincent"
     ],
-    "where": "The 14th ACM SIGPLAN International Conference on Functional Programming.",
+    "where": "The 14th ACM SIGPLAN International Conference on Functional Programming (ICFP 2009).",
     "year": "2009",
     "files": [
       {
@@ -424,7 +425,7 @@
       "thiagu",
       "shaofa"
     ],
-    "where": "The 18th International Conference on Concurrency Theory.",
+    "where": "The 18th International Conference on Concurrency Theory (CONCUR 2007).",
     "year": "2007",
     "files": [
       {
