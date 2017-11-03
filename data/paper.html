@@ -21,14 +21,18 @@ kind: .
     </h5>
     <div class="card-text authors">
       {{ for a in entry.authors }}
-      {{ if (a != entry.authors.last) }}
+      {{ if a.next && !a.next.next }}
+      <div class="author">
+        <a href="{{authors.[a].url}}">{{authors.[a].name}}</a> and
+      </div>
+      {{ elif a.next }}
       <div class="author">
         <a href="{{authors.[a].url}}">{{authors.[a].name}}</a>,
       </div>
       {{ else }}
       <div class="author">
-        <a href="{{authors.[entry.authors.last].url}}">
-          {{authors.[entry.authors.last].name}}.
+        <a href="{{authors.[a].url}}">
+          {{authors.[a].name}}.
         </a>
       </div>
       {{ endif }}
