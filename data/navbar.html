@@ -12,17 +12,17 @@
   </button>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav ml-5">
-{{ for i in site.pages }}
-{{ if i.url && i.title && (i = site.page) }}
+{{ for i in site.pages do }}
+{{ if (i.url && i.title && i = site.page) }}
       <li class="nav-item active">
       <a class="nav-link" href="{{i.url}}">{{i.title}}</a>
       </li>
-{{ elif i.url && i.title }}
+{{ elif (i.url && i.title) }}
       <li class="nav-item">
       <a class="nav-link" href="{{i.url}}">{{i.title}}</a>
       <li>
-{{ endif }}
-{{ endfor }}
+{{ fi }}
+{{ done }}
     </div>
   </div>
   </div>

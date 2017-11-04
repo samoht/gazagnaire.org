@@ -18,8 +18,8 @@ title: Papers
       Gate</a>
       and <a href="https://scholar.google.fr/citations?user=gqnNiyYAAAAJ">Google
       Scholar</a> lists some of my publications. Or see below
-      the full list of my <a href="#publications">journal and conferences</a>
-      publications and of my <a href="#reports">technical reports</a>.
+      the full list of my <a href="#publications">journal, conference and
+      workshop</a> papers and <a href="#reports">technical reports</a>.
 
     </div>
   </div>
@@ -31,9 +31,9 @@ title: Papers
       <div class="col-10">
         <h3 class="mb-5">
           <i class="fa fa-book"></i>
-          Journals and Conferences
+          Journals, Conferences and Workshops
         </h3>
-        {{ for i in papers paper(entry: i) endfor }}
+        {{ for i in papers do paper(entry: i) done }}
       </div>
     </div>
   </section>
@@ -47,7 +47,7 @@ title: Papers
           <i class="fa fa-file-text"></i>
           Technical Reports
         </h3>
-      {{ for i in tech paper(entry: i) endfor }}
+      {{ for i in tech do paper(entry: i) done }}
     </div>
   </div>
 </div>
