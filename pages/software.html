@@ -1,0 +1,61 @@
+title: Software
+---
+{{ header }}
+
+{{ navbar }}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-8">
+      <h2 class="mb-5">Software</h2>
+
+      <p class="mb-5">
+        I contribute and maintain to academic and industrial open-source
+        projects on <a href="#github">GitHub</a>. See my
+        <a href="https://github.com/samoht/">homepage</a> on Github for the full
+        list of my projects or check <a href="#projects">below</a>
+        for a selection of my previous and current projects.
+      </p>
+
+    </div>
+  </div>
+
+  <section id="github" class="pt-5">
+  <hr class="mb-5">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-8">
+
+      <h3 class="mb-5">
+        <i class="fa fa-github"></i>
+        GitHub Activity
+      </h3>
+
+      <div class="calendar bm-5">
+        See <a href="https://github.com/samoht/">https://github.com/samoht/</a>
+      </div>
+
+      <script>GitHubCalendar(".calendar", "samoht");</script>
+
+    </div>
+  </div>
+  </section>
+
+  <section id="projects" class="pt-5">
+  <hr class="mb-5">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-md-8">
+
+      <h3 class="mb-5">Selected Projects</h3>
+
+      {{ for i in projects do project(entry: i) done }}
+
+    </div>
+  </div>
+
+</div>
+
+{{ footer }}

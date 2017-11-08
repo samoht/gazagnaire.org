@@ -1,0 +1,74 @@
+[
+  {
+    "name": "the Docker platform",
+    "logo": "docker.png",
+    "authors": [
+      "docker",
+      "moby"
+    ],
+    "start-year": "2015",
+    "about": "Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud. Moby is an open framework created by Docker to assemble specialized container systems without reinventing the wheel. It provides a “lego set” of dozens of standard components and a framework for assembling them into custom platforms.",
+    "links": [
+      {
+        "kind": "github",
+        "url": "https://github.com/moby"
+      },
+      {
+        "kind": "github",
+        "url": "https://github.com/docker"
+      }
+    ]
+  },
+  {
+    "name": "MirageOS",
+    "logo": "mirage.png",
+    "authors": ["mirage"],
+    "start-year": "2008",
+    "links": [
+      {
+        "kind": "github",
+        "url": "https://github.com/mirage"
+      },
+      {
+        "kind": "pdf",
+        "url": "http://anil.recoil.org/papers/2013-asplos-mirage.pdf"
+      }
+    ],
+    "about": "MirageOS is a library operating system that constructs <a href='https://en.wikipedia.org/wiki/Unikernel'>unikernels</a> for secure, high-performance network applications across a variety of cloud computing and mobile platforms. Code can be developed on a normal OS such as Linux or MacOS X, and then compiled into a fully-standalone, specialised unikernel that runs under a Xen or KVM hypervisor."
+  },
+  {
+    "name": "Opam",
+    "logo": "opam.png",
+    "authors": ["ocamlpro", "ocamllabs"],
+    "start-year": "2012",
+    "links": [
+      {
+        "kind": "github",
+        "url": "https://github.com/ocaml/opam"
+      },
+      {
+        "kind": "pdf",
+        "url": "https://ocaml.org/meetings/ocaml/2012/slides/oud2012-paper17-slides.pdf"
+      }
+    ],
+    "about": "Opam is a source-based package manager for OCaml. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow."
+  },
+  {
+    "name": "XenServer",
+    "logo": "xen.jpg",
+    "authors": ["citrix"],
+    "start-year": "2008",
+    "end-year": "2012",
+    "links": [
+      {
+        "kind": "github",
+        "url": "https://github.com/xapi-project/"
+      },
+      {
+        "kind": "pdf",
+        "url": "http://gazagnaire.org/pub/SSGM10.pdf"
+      }
+    ],
+    "about": "XenServer is deployed in over 40,000 companies worldwide, often in mission-critical infrastructure, with the largest single customer having more than 20,000 machines running XenServer. The management tools of XenServer are written in OCaml."
+  }
+]

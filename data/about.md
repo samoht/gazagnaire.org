@@ -14,7 +14,6 @@ library and the main developer of the [Irmin] Git-like distributed
 store. I previously designed and lead the implementation [OPAM,] the
 package manager for [OCaml] and I've worked on [XenServer.]
 
-
 [Docker.]: https://docker.com/
 [Unikernel Systems,]: http://unikernel.com/
 [unikernels]: http://unikernel.com/files/2014-cacm-unikernels.pdf

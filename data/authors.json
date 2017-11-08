@@ -154,5 +154,29 @@
   "anil": {
     "name": "A. Madhavapeddy",
     "url": "http://anil.recoil.org"
+  },
+  "docker": {
+    "name": "Docker Inc.",
+    "url": "https://docker.com/"
+  },
+  "moby": {
+    "name": "the Moby project",
+    "url": "https://mobyproject.org/"
+  },
+  "citrix": {
+    "name": "Citrix",
+    "url": "https://www.citrix.com/products/xenserver/"
+  },
+  "ocamlpro": {
+    "name": "OCamlPro",
+    "url": "http://www.ocamlpro.com/"
+  },
+  "ocamllabs": {
+    "name": "OCaml Labs",
+    "url": "http://ocamllabs.io/"
+  },
+  "mirage": {
+    "name": "the MirageOS team",
+    "url": "https://mirage.io/community/#team"
   }
 }
